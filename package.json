@@ -4,8 +4,10 @@
   "description": "React flexbox grid system using styled components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha --opts .mocharc",
+    "mocha:watch": "npm run mocha -- --watch"
   },
   "repository": {
     "type": "git",
