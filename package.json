@@ -1,0 +1,41 @@
+{
+  "name": "react-flexa",
+  "version": "1.0.0",
+  "description": "React flexbox grid system using styled components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronvanston/react-flexa.git"
+  },
+  "keywords": [
+    "flexbox",
+    "grid",
+    "styled components",
+    "react"
+  ],
+  "author": "Aaron Vanston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronvanston/react-flexa/issues"
+  },
+  "homepage": "https://github.com/aaronvanston/react-flexa#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-airbnb": "^2.2.3",
+    "babel-preset-stage-1": "^6.22.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "styled-components": "^1.4.4"
+  }
+}
