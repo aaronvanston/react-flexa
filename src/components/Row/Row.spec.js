@@ -1,7 +1,7 @@
-import { expect } from 'chai';
+import chai from '@/chai';
 
 describe('<Row />', () => {
   it('Should ...', () => {
-    expect(true).to.be.true();
+    chai.expect(true).to.be.true();
   });
 });
