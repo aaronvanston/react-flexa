@@ -38,4 +38,6 @@ Col.PropTypes = {
   ]),
 };
 
+Col.displayName = 'Col';
+
 export default Col;
