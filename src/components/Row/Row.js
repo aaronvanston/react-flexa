@@ -83,4 +83,6 @@ Row.PropTypes = {
   ]),
 };
 
+Row.displayName = 'Row';
+
 export default Row;
