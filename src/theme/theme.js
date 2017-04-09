@@ -21,4 +21,5 @@ const theme = (props) => {
     },
   });
 };
+
 export default theme;
