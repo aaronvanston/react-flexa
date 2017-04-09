@@ -1,1 +1,1 @@
-export const DEFAULT_THEME = 'flexa';
+export const FLEXA_THEME = 'flexa';
