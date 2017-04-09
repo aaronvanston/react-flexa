@@ -20,14 +20,20 @@ describe('theme', () => {
       chai.expect(theme(customTheme).columns).to.not.eql(16);
     });
 
-    it('should only override what is passed in', () => {
+    it('should only override values that have been passed in', () => {
       const customTheme = {
         theme: {
           flexa: { columns: 16 },
         },
       };
 
-      chai.expect(theme(customTheme).columns).to.eql(16);
+      const endTheme = {
+        breakpoints: { lg: 60, md: 48, sm: 30, xs: 0 },
+        columns: 16,
+        gutter: { lg: 2, md: 2, sm: 1, xs: 1 },
+      };
+
+      chai.expect(theme(customTheme)).to.eql(endTheme);
       chai.expect(theme(customTheme)).to.not.eql(defaultTheme);
     });
 
