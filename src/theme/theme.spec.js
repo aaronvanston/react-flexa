@@ -1,7 +1,7 @@
 import chai from '@/chai';
 
 import defaultTheme from './defaultTheme';
-import { theme } from './theme';
+import theme from './theme';
 
 describe('theme', () => {
   it('should set the default theme if a custom theme is not provided', () => {

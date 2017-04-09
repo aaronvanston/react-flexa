@@ -4,7 +4,7 @@ import { FLEXA_THEME } from '~/config';
 
 import defaultTheme from './defaultTheme';
 
-export const theme = (props) => {
+const theme = (props) => {
   const customTheme = (_.has(props, 'theme') && _.has(props, `theme[${FLEXA_THEME}]`))
     ? props.theme[FLEXA_THEME]
     : {};
@@ -21,3 +21,5 @@ export const theme = (props) => {
     },
   });
 };
+
+export default theme;
