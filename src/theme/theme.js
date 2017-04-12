@@ -4,7 +4,7 @@ import { FLEXA_THEME } from '~/config';
 
 import defaultTheme from './defaultTheme';
 
-const theme = (props) => {
+export const theme = (props) => {
   const customTheme = (_.has(props, 'theme') && _.has(props, `theme[${FLEXA_THEME}]`))
     ? props.theme[FLEXA_THEME]
     : {};
@@ -22,4 +22,5 @@ const theme = (props) => {
   });
 };
 
-export default theme;
+// TODO generate these dynamically based on the object keys for breakpoints
+export const breakpoints = ['xs', 'sm', 'md', 'lg'];

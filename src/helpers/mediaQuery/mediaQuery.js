@@ -1,6 +1,8 @@
 import { css } from 'styled-components';
 
-import { theme } from '~/theme';
+import { themeProvider } from '~/theme';
+
+const { theme } = themeProvider;
 
 const mediaQuery = Object.keys(theme().breakpoints).reduce((accumulator, value) => {
   const breakpointSize = theme().breakpoints[value];

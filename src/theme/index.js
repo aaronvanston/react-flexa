@@ -1,2 +1,2 @@
-export theme from './theme';
+export * as themeProvider from './theme';
 export defaultTheme from './defaultTheme';
