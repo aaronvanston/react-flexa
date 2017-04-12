@@ -1,11 +1,13 @@
 import chai from '@/chai';
 
-import defaultTheme from './defaultTheme';
-import theme from './theme';
+import { themeProvider, defaultTheme } from '~/theme';
+
+const { theme, breakpoints } = themeProvider;
 
 describe('theme', () => {
   it('should set the default theme if a custom theme is not provided', () => {
     chai.expect(theme()).to.eql(defaultTheme);
+    chai.expect(breakpoints).to.eql(Object.keys(defaultTheme.breakpoints));
   });
 
   describe('overriding the default theme', () => {
