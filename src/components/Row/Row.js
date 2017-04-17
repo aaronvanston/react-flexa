@@ -1,6 +1,38 @@
 import { PropTypes } from 'react';
+import styled from 'styled-components';
 
-const Row = '';
+const Row = styled.div`
+  /* Initial components properties */
+  box-sizing: border-box;
+
+  /* Flexbox properties */
+  /* TODO: integrate responsive values via object */
+  display: ${props => props.display};
+  flex-direction: ${props => props.flexDirection};
+  flex-wrap: ${props => props.flexWrap};
+  justify-content: ${props => props.justifyContent};
+  align-items: ${props => props.alignItems};
+  align-content: ${props => props.alignContent};
+
+  /* Guttter properties */
+  /* TODO: create gutter helper function */
+  margin-right: ${props => props.gutter};
+  margin-left: ${props => props.gutter};
+
+  /* Display properties */
+  ${props => props.hidden && `
+    display: none;
+  `}
+`;
+
+Row.defaultProps = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'nowrap',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  alignContent: 'flex-start',
+};
 
 const displayOptions = ['flex', 'flex-inline'];
 const flexDirectionOptions = ['row', 'row-reverse', 'column', 'column-reverse'];
