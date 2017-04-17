@@ -1,5 +1,5 @@
 describe('<Row />', () => {
-  it('Should ...', () => {
+  test('Should ...', () => {
     expect(true).toBe(true);
   });
 });
