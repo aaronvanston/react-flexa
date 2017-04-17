@@ -14,7 +14,12 @@ Col.PropTypes = {
   gutter: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
-    PropTypes.bool,
+    PropTypes.shape({
+      xs: PropTypes.number,
+      sm: PropTypes.number,
+      md: PropTypes.number,
+      lg: PropTypes.number,
+    }),
   ]),
 
   order: PropTypes.oneOfType([
