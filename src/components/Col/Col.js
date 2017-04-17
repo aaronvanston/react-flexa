@@ -1,6 +1,35 @@
 import { PropTypes } from 'react';
+import styled from 'styled-components';
 
-const Col = '';
+const Col = styled.div`
+  /* Initial components properties */
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  display: block;
+
+  /* Flexbox properties */
+  /* TODO: integrate responsive values via object */
+  order: ${props => props.order};
+  align-self: ${props => props.alignSelf};
+
+  /* Guttter properties */
+  /* TODO: create gutter helper function */
+  padding-right: ${props => props.gutter};
+  padding-left: ${props => props.gutter};
+
+  flex-basis: 0; /* (100 / columnsCount * value)% */
+  max-width: 0; /* (100 / columnsCount * value)% */
+
+  /* Display properties */
+  ${props => props.hidden && `
+    display: none;
+  `}
+`;
+
+Col.defaultProps = {
+  order: 0,
+  alignSelf: 'auto',
+};
 
 const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
