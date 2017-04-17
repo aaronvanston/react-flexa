@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "test": "npm run lint && npm run jest",
-    "jest": "jest --config=.jestrc",
-    "jest:watch": "npm run jest -- --watchAll"
+    "jest": "jest",
+    "jest:watch": "npm run jest -- --watch"
   },
   "repository": {
     "type": "git",
