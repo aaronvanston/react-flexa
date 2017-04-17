@@ -1,3 +1,0 @@
---compilers js:babel-core/register
---require jsdom-global/register
-src/**/*.spec.js
