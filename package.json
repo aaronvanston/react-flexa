@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "npm run lint && npm run mocha",
-    "mocha": "mocha --opts .mocharc",
-    "mocha:watch": "npm run mocha -- --watch"
+    "test": "npm run lint && npm run jest",
+    "jest": "jest",
+    "jest:watch": "npm run jest -- --watch"
   },
   "repository": {
     "type": "git",
@@ -31,18 +31,15 @@
     "babel-plugin-root-import": "^5.1.0",
     "babel-preset-airbnb": "^2.2.3",
     "babel-preset-stage-1": "^6.22.0",
-    "chai": "^3.5.0",
-    "chai-enzyme": "^0.6.1",
-    "dirty-chai": "^1.2.2",
     "enzyme": "^2.8.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "jest": "^19.0.2",
     "jsdom": "^9.12.0",
     "jsdom-global": "^2.1.1",
-    "mocha": "^3.2.0",
     "react-addons-test-utils": "^15.4.2"
   },
   "dependencies": {
