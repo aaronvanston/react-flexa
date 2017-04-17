@@ -1,13 +1,11 @@
-import chai from '@/chai';
-
 import { themeProvider, defaultTheme } from '~/theme';
 
 const { theme, breakpoints } = themeProvider;
 
 describe('theme', () => {
   it('should set the default theme if a custom theme is not provided', () => {
-    chai.expect(theme()).to.eql(defaultTheme);
-    chai.expect(breakpoints).to.eql(Object.keys(defaultTheme.breakpoints));
+    expect(theme()).toEqual(defaultTheme);
+    expect(breakpoints).toEqual(Object.keys(defaultTheme.breakpoints));
   });
 
   describe('overriding the default theme', () => {
@@ -18,8 +16,8 @@ describe('theme', () => {
         },
       };
 
-      chai.expect(theme(customTheme)).to.eql(defaultTheme);
-      chai.expect(theme(customTheme).columns).to.not.eql(16);
+      expect(theme(customTheme)).toEqual(defaultTheme);
+      expect(theme(customTheme).columns).not.toEqual(16);
     });
 
     it('should only override values that have been passed in', () => {
@@ -35,8 +33,8 @@ describe('theme', () => {
         gutter: { lg: 2, md: 2, sm: 1, xs: 1 },
       };
 
-      chai.expect(theme(customTheme)).to.eql(endTheme);
-      chai.expect(theme(customTheme)).to.not.eql(defaultTheme);
+      expect(theme(customTheme)).toEqual(endTheme);
+      expect(theme(customTheme)).not.toEqual(defaultTheme);
     });
 
     it('should override whole theme if passed', () => {
@@ -50,8 +48,8 @@ describe('theme', () => {
         },
       };
 
-      chai.expect(theme(customTheme)).to.eql(customTheme.theme.flexa);
-      chai.expect(theme(customTheme)).to.not.eql(defaultTheme);
+      expect(theme(customTheme)).toEqual(customTheme.theme.flexa);
+      expect(theme(customTheme)).not.toEqual(defaultTheme);
     });
   });
 });
