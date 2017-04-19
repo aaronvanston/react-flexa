@@ -1,3 +1,4 @@
 export columnWidth from './columnWidth/columnWidth';
+export * as gutter from './gutter/gutter';
 export mediaQuery from './mediaQuery/mediaQuery';
 export sortBreakpointProps from './sortBreakpointProps/sortBreakpointProps';
