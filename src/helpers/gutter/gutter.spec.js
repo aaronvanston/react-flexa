@@ -30,15 +30,15 @@ describe('row', () => {
   test('should generate gutter css', () => {
     const mockProps = { xs: 1, gutter: { sm: 12 } };
     const rowGutter = row(mockProps, 'sm').join('');
-    expect(rowGutter).toContain('margin-right: calc(-12rem / 2)');
-    expect(rowGutter).toContain('margin-left: calc(-12rem / 2)');
+    expect(rowGutter).toContain('margin-right: calc(-12rem / 2);');
+    expect(rowGutter).toContain('margin-left: calc(-12rem / 2);');
   });
 
   test('should generate gutter css included unit', () => {
     const mockProps = { xs: 1, gutter: { sm: '12px' } };
     const rowGutter = row(mockProps, 'sm').join('');
-    expect(rowGutter).toContain('margin-right: calc(-12px / 2)');
-    expect(rowGutter).toContain('margin-left: calc(-12px / 2)');
+    expect(rowGutter).toContain('margin-right: calc(-12px / 2);');
+    expect(rowGutter).toContain('margin-left: calc(-12px / 2);');
   });
 });
 
@@ -46,14 +46,14 @@ describe('col', () => {
   test('should generate gutter css', () => {
     const mockProps = { xs: 1, gutter: { sm: 12 } };
     const colGutter = col(mockProps, 'sm').join('');
-    expect(colGutter).toContain('padding-right: calc(12rem / 2)');
-    expect(colGutter).toContain('padding-left: calc(12rem / 2)');
+    expect(colGutter).toContain('padding-right: calc(12rem / 2);');
+    expect(colGutter).toContain('padding-left: calc(12rem / 2);');
   });
 
   test('should generate gutter css included unit', () => {
     const mockProps = { xs: 1, gutter: { sm: '12px' } };
     const colGutter = col(mockProps, 'sm').join('');
-    expect(colGutter).toContain('padding-right: calc(12px / 2)');
-    expect(colGutter).toContain('padding-left: calc(12px / 2)');
+    expect(colGutter).toContain('padding-right: calc(12px / 2);');
+    expect(colGutter).toContain('padding-left: calc(12px / 2);');
   });
 });
