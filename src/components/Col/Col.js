@@ -1,6 +1,12 @@
 import { PropTypes } from 'react';
 import styled from 'styled-components';
 
+import { sortBreakpointProps, mediaQuery, columnWidth, gutter } from '~/helpers';
+
+import { themeProvider } from '~/theme';
+
+const { theme } = themeProvider;
+
 const Col = styled.div`
   /* Initial components properties */
   box-sizing: border-box;
@@ -17,13 +23,20 @@ const Col = styled.div`
   padding-right: ${props => props.gutter};
   padding-left: ${props => props.gutter};
 
-  flex-basis: 0; /* (100 / columnsCount * value)% */
-  max-width: 0; /* (100 / columnsCount * value)% */
-
   /* Display properties */
   ${props => props.hidden && `
     display: none;
   `}
+
+  ${props => sortBreakpointProps(props).map(breakpoint => mediaQuery[breakpoint]`
+
+    // Generate gutter
+    ${gutter.col(props, breakpoint)}
+
+    // Generate column width
+    ${columnWidth(props, breakpoint)}
+
+  `)};
 `;
 
 Col.defaultProps = {
