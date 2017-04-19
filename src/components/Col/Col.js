@@ -18,11 +18,6 @@ const Col = styled.div`
   order: ${props => props.order};
   align-self: ${props => props.alignSelf};
 
-  /* Guttter properties */
-  /* TODO: create gutter helper function */
-  padding-right: ${props => props.gutter};
-  padding-left: ${props => props.gutter};
-
   /* Display properties */
   ${props => props.hidden && `
     display: none;
