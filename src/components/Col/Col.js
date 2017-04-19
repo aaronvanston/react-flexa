@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 import { sortBreakpointProps, mediaQuery, columnWidth, gutter } from '~/helpers';
 
-import { themeProvider } from '~/theme';
-
-const { theme } = themeProvider;
-
 const Col = styled.div`
   /* Initial components properties */
   box-sizing: border-box;
