@@ -51,7 +51,16 @@ Col.PropTypes = {
   sm: PropTypes.number,
   md: PropTypes.number,
   lg: PropTypes.number,
-  hidden: PropTypes.bool,
+
+  hidden: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      xs: PropTypes.number,
+      sm: PropTypes.number,
+      md: PropTypes.number,
+      lg: PropTypes.number,
+    }),
+  ]),
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
