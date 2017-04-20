@@ -2,18 +2,13 @@ import { PropTypes } from 'react';
 import styled from 'styled-components';
 
 import { themeProvider } from '~/theme';
-import { mediaQuery, columnWidth, gutter } from '~/helpers';
+import { mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
 
 const Col = styled.div`
-  /* Initial components properties */
+  // Initial components properties
   box-sizing: border-box;
   flex: 0 0 auto;
   display: block;
-
-  /* Flexbox properties */
-  /* TODO: integrate responsive values via object */
-  order: ${props => props.order};
-  align-self: ${props => props.alignSelf};
 
   /* Display properties */
   ${props => props.hidden && `
@@ -27,6 +22,12 @@ const Col = styled.div`
 
     // Generate column width
     ${columnWidth(props, breakpoint)}
+
+    // Responsive Flexbox properties
+    ${CSSProperty(props, breakpoint, 'order')}
+    ${CSSProperty(props, breakpoint, 'align-self')}
+
+    ${CSSProperty(props, breakpoint, 'align-self')}
 
   `)};
 `;
