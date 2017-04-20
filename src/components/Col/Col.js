@@ -10,10 +10,6 @@ const Col = styled.div`
   flex: 0 0 auto;
   display: block;
 
-  /* Display properties */
-  ${props => props.hidden && `
-    display: none;
-  `}
 
   ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
 
@@ -44,16 +40,6 @@ Col.PropTypes = {
   sm: PropTypes.number,
   md: PropTypes.number,
   lg: PropTypes.number,
-
-  hidden: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({
-      xs: PropTypes.number,
-      sm: PropTypes.number,
-      md: PropTypes.number,
-      lg: PropTypes.number,
-    }),
-  ]),
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
