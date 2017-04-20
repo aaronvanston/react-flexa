@@ -22,11 +22,6 @@ const Row = styled.div`
   margin-right: ${props => props.gutter};
   margin-left: ${props => props.gutter};
 
-  /* Display properties */
-  ${props => props.hidden && `
-    display: none;
-  `}
-
   ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
 
   `)
