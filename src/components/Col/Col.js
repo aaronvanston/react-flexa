@@ -1,7 +1,8 @@
 import { PropTypes } from 'react';
 import styled from 'styled-components';
 
-import { sortBreakpointProps, mediaQuery, columnWidth, gutter } from '~/helpers';
+import { themeProvider } from '~/theme';
+import { mediaQuery, columnWidth, gutter } from '~/helpers';
 
 const Col = styled.div`
   /* Initial components properties */
@@ -19,7 +20,7 @@ const Col = styled.div`
     display: none;
   `}
 
-  ${props => sortBreakpointProps(props).map(breakpoint => mediaQuery[breakpoint]`
+  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
 
     // Generate gutter
     ${gutter.col(props, breakpoint)}

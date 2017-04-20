@@ -1,6 +1,9 @@
 import { PropTypes } from 'react';
 import styled from 'styled-components';
 
+import { themeProvider } from '~/theme';
+import { mediaQuery } from '~/helpers';
+
 const Row = styled.div`
   /* Initial components properties */
   box-sizing: border-box;
@@ -23,6 +26,11 @@ const Row = styled.div`
   ${props => props.hidden && `
     display: none;
   `}
+
+  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
+
+  `)
+  }
 `;
 
 Row.defaultProps = {
