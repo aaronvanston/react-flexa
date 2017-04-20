@@ -44,7 +44,7 @@ describe('CSSProperty', () => {
     expect(CSSProperty(mockProps, 'xs', 'order')).toEqual(null);
   });
 
-  test('should not generte css nested property', () => {
+  test('should generte css nested property', () => {
     const mockProps = { alignSelf: { sm: 'center' } };
     expect(CSSProperty(mockProps, 'sm', 'align-self').join('')).toContain('align-self: center');
   });
