@@ -40,6 +40,12 @@ describe('row', () => {
     expect(rowGutter).toContain('margin-right: calc(-12px / 2);');
     expect(rowGutter).toContain('margin-left: calc(-12px / 2);');
   });
+
+  test('should return null if breakpoint does not exist', () => {
+    const mockProps = { xs: 1, gutter: { sm: '12px' } };
+    const rowGutter = row(mockProps, 'lg');
+    expect(rowGutter).toEqual(null);
+  });
 });
 
 describe('col', () => {
@@ -55,5 +61,11 @@ describe('col', () => {
     const colGutter = col(mockProps, 'sm').join('');
     expect(colGutter).toContain('padding-right: calc(12px / 2);');
     expect(colGutter).toContain('padding-left: calc(12px / 2);');
+  });
+
+  test('should return null if breakpoint does not exist', () => {
+    const mockProps = { xs: 1, gutter: { sm: '12px' } };
+    const colGutter = col(mockProps, 'lg');
+    expect(colGutter).toEqual(null);
   });
 });
