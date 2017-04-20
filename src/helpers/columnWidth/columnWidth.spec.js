@@ -20,4 +20,9 @@ describe('columnWidth', () => {
     expect(width).toContain('flex-basis: 16.666666666666664%;');
     expect(width).toContain('max-width: 16.666666666666664%;');
   });
+
+  test('should return nothing if breakpoint does not exist', () => {
+    const width = columnWidth(mockProps, 'xl');
+    expect(width).toEqual(null);
+  });
 });
