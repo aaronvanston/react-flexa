@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
 import { themeProvider } from '~/theme';
-import { mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
+import { filterProps, mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
 
-const Col = styled(props => React.createElement(props.elementType, props))`
+const Col = styled(props => React.createElement(props.elementType, filterProps(props, Col.PropTypes)))`
   // Initial component properties
   box-sizing: border-box;
   flex: 0 0 auto;

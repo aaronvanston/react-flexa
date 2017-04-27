@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
 import { themeProvider } from '~/theme';
-import { mediaQuery, gutter, CSSProperty } from '~/helpers';
+import { filterProps, mediaQuery, gutter, CSSProperty } from '~/helpers';
 
-const Row = styled(props => React.createElement(props.elementType || 'div', props))`
+const Row = styled(props => React.createElement(props.elementType, filterProps(props, Row.PropTypes))`
   // Initial component property
   box-sizing: border-box;
 
