@@ -5,7 +5,7 @@ import { themeProvider } from '~/theme';
 import { mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
 
 const Col = styled.div`
-  // Initial components properties
+  // Initial component properties
   box-sizing: border-box;
   flex: 0 0 auto;
   display: block;
