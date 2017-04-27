@@ -1,28 +1,25 @@
 import { PropTypes } from 'react';
 import styled from 'styled-components';
 
+import { themeProvider } from '~/theme';
+import { mediaQuery, gutter, CSSProperty } from '~/helpers';
+
 const Row = styled.div`
-  /* Initial components properties */
+  // Initial component property
   box-sizing: border-box;
 
-  /* Flexbox properties */
-  /* TODO: integrate responsive values via object */
-  display: ${props => props.display};
-  flex-direction: ${props => props.flexDirection};
-  flex-wrap: ${props => props.flexWrap};
-  justify-content: ${props => props.justifyContent};
-  align-items: ${props => props.alignItems};
-  align-content: ${props => props.alignContent};
+  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
+    // Generate gutter
+    ${gutter.row(props, breakpoint)}
 
-  /* Guttter properties */
-  /* TODO: create gutter helper function */
-  margin-right: ${props => props.gutter};
-  margin-left: ${props => props.gutter};
-
-  /* Display properties */
-  ${props => props.hidden && `
-    display: none;
-  `}
+    // Responsive Flexbox properties
+    ${CSSProperty(props, breakpoint, 'display')}
+    ${CSSProperty(props, breakpoint, 'flex-direction')}
+    ${CSSProperty(props, breakpoint, 'flex-wrap')}
+    ${CSSProperty(props, breakpoint, 'justify-content')}
+    ${CSSProperty(props, breakpoint, 'align-items')}
+    ${CSSProperty(props, breakpoint, 'align-content')}
+  `)};
 `;
 
 Row.defaultProps = {
@@ -42,7 +39,6 @@ const alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stre
 const alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch '];
 
 Row.PropTypes = {
-  hidden: PropTypes.bool,
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,

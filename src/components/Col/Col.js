@@ -1,29 +1,26 @@
 import { PropTypes } from 'react';
 import styled from 'styled-components';
 
+import { themeProvider } from '~/theme';
+import { mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
+
 const Col = styled.div`
-  /* Initial components properties */
+  // Initial component properties
   box-sizing: border-box;
   flex: 0 0 auto;
   display: block;
 
-  /* Flexbox properties */
-  /* TODO: integrate responsive values via object */
-  order: ${props => props.order};
-  align-self: ${props => props.alignSelf};
+  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
+    // Generate gutter
+    ${gutter.col(props, breakpoint)}
 
-  /* Guttter properties */
-  /* TODO: create gutter helper function */
-  padding-right: ${props => props.gutter};
-  padding-left: ${props => props.gutter};
+    // Generate column width
+    ${columnWidth(props, breakpoint)}
 
-  flex-basis: 0; /* (100 / columnsCount * value)% */
-  max-width: 0; /* (100 / columnsCount * value)% */
-
-  /* Display properties */
-  ${props => props.hidden && `
-    display: none;
-  `}
+    // Responsive Flexbox properties
+    ${CSSProperty(props, breakpoint, 'order')}
+    ${CSSProperty(props, breakpoint, 'align-self')}
+  `)};
 `;
 
 Col.defaultProps = {
@@ -38,16 +35,27 @@ Col.PropTypes = {
   sm: PropTypes.number,
   md: PropTypes.number,
   lg: PropTypes.number,
-  hidden: PropTypes.bool,
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
     PropTypes.shape({
-      xs: PropTypes.number,
-      sm: PropTypes.number,
-      md: PropTypes.number,
-      lg: PropTypes.number,
+      xs: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
+      sm: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
+      md: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
+      lg: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
     }),
   ]),
 

@@ -1,2 +1,5 @@
+export columnWidth from './columnWidth/columnWidth';
+export CSSProperty from './CSSProperty/CSSProperty';
+export * as gutter from './gutter/gutter';
 export mediaQuery from './mediaQuery/mediaQuery';
-export sortBreakpointProps from './sortBreakpointProps/sortBreakpointProps';
+export sortBreakpoints from './sortBreakpoints/sortBreakpoints';

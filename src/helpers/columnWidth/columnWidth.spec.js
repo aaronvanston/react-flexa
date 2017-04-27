@@ -1,0 +1,28 @@
+import columnWidth, { percentage } from './columnWidth';
+
+const mockProps = { xs: -1, sm: 2, md: 0, lg: 6 };
+
+describe('percentage', () => {
+  test('should generate a percentage based on collumn size', () => {
+    expect(percentage(mockProps, 'lg')).toEqual(50);
+    expect(percentage(mockProps, 'md')).toEqual(0);
+    expect(percentage(mockProps, 'sm')).toEqual(16.666666666666664);
+  });
+
+  test('should normalise negative numbers', () => {
+    expect(percentage(mockProps, 'xs')).toEqual(8.333333333333332);
+  });
+});
+
+describe('columnWidth', () => {
+  test('should generate column width css', () => {
+    const width = columnWidth(mockProps, 'sm').join('');
+    expect(width).toContain('flex-basis: 16.666666666666664%;');
+    expect(width).toContain('max-width: 16.666666666666664%;');
+  });
+
+  test('should return nothing if breakpoint does not exist', () => {
+    const width = columnWidth(mockProps, 'xl');
+    expect(width).toEqual(null);
+  });
+});
