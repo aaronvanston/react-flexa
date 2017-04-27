@@ -10,9 +10,7 @@ const Col = styled.div`
   flex: 0 0 auto;
   display: block;
 
-
   ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
-
     // Generate gutter
     ${gutter.col(props, breakpoint)}
 
@@ -22,9 +20,6 @@ const Col = styled.div`
     // Responsive Flexbox properties
     ${CSSProperty(props, breakpoint, 'order')}
     ${CSSProperty(props, breakpoint, 'align-self')}
-
-    ${CSSProperty(props, breakpoint, 'align-self')}
-
   `)};
 `;
 
