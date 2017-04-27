@@ -1,10 +1,10 @@
-import { PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
 import { themeProvider } from '~/theme';
 import { mediaQuery, gutter, CSSProperty } from '~/helpers';
 
-const Row = styled.div`
+const Row = styled(props => React.createElement(props.elementType || 'div', props))`
   // Initial component property
   box-sizing: border-box;
 
@@ -29,6 +29,7 @@ Row.defaultProps = {
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
   alignContent: 'flex-start',
+  elementType: 'div',
 };
 
 const displayOptions = ['flex', 'flex-inline'];
@@ -110,6 +111,10 @@ Row.PropTypes = {
       lg: PropTypes.oneOf(alignContentOptions),
     }),
   ]),
+
+  elementType: PropTypes.string,
+
+  children: PropTypes.node,
 };
 
 Row.displayName = 'Row';
