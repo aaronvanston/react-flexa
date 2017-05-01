@@ -1,10 +1,12 @@
-import { PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
 import { themeProvider } from '~/theme';
-import { mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
+import { filterProps, mediaQuery, columnWidth, gutter, CSSProperty } from '~/helpers';
 
-const Col = styled.div`
+const Col = styled(props =>
+  React.createElement(props.elementType, filterProps(props, Col.PropTypes)),
+)`
   // Initial component properties
   box-sizing: border-box;
   flex: 0 0 auto;
@@ -26,6 +28,7 @@ const Col = styled.div`
 Col.defaultProps = {
   order: 0,
   alignSelf: 'auto',
+  elementType: 'div',
 };
 
 const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
@@ -78,6 +81,10 @@ Col.PropTypes = {
       lg: PropTypes.oneOf(alignSelfOptions),
     }),
   ]),
+
+  elementType: 'div',
+
+  children: PropTypes.node,
 };
 
 Col.displayName = 'Col';
