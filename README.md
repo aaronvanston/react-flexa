@@ -72,7 +72,6 @@ These are the **available** and **reserved** props that can be used on the `Row`
 
 Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-
 ### Col Props
 
 These are the **available** and **reserved** props that can be used on the `Col` component. All other props such as `className` will be automatically be passed down to the generated element.
@@ -92,6 +91,37 @@ Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/c
 
 
 ### Responsive API using objects
+Props with a valid type of "object" enable you to set the value corresponding to a breakpoint. Including an object with keys matching that of the breakpoints will set the desired value on that particular breakpoint.
+
+For example, the object for setting a `Row` compoent setting `justifyContent` to "flex-start" on `sm` breakpoint, "center" on `md` breakpoint, and finally "flex-end" on `lg` breakpoint would look like:
+
+```js
+{
+  xs: "flex-start",
+  md: "center",
+  lg: "flex-end",
+}
+```
+**Note:** we have chosen to not change anything on the `sm` breakpoint.
+
+Using this object in the example of the `Row` component:
+
+```js
+import React from 'react'
+import { Row, Col } from 'react-flexa'
+
+class Component extends React.Component {
+  render() {
+    return (
+      <Row justifyContent={{ xs: "flex-start", md: "center", lg: "flex-end" }}>
+        ...
+      </Row>
+    )
+  }
+}
+```
+
+This will now generate CSS with `min-width` media queries for the responsive values. **Note:** a media query is not set for any value assigned to `xs` due to mobile first min-width media query structure.
 
 
 ## License
