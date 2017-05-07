@@ -20,8 +20,8 @@ yarn add react-flexa
 ### Basic usage
 
 ```js
-import React from 'react'
-import { Row, Col } from 'react-flexa'
+import React from 'react';
+import { Row, Col } from 'react-flexa';
 
 class Component extends React.Component {
   render() {
@@ -32,14 +32,14 @@ class Component extends React.Component {
       </Row>
     )
   }
-}
+};
 ```
 
 ### Advance responsive usage
-View [Responsive API using objects](#responsive-api-using-objects) for more information on how to responsivly set flexbox properties based on breakpoint.
+View [Responsive API using objects](#responsive-api-using-objects) for more information on how to responsively set flexbox properties based on breakpoint.
 ```js
-import React from 'react'
-import { Row, Col } from 'react-flexa'
+import React from 'react';
+import { Row, Col } from 'react-flexa';
 
 class Component extends React.Component {
   render() {
@@ -50,13 +50,11 @@ class Component extends React.Component {
       </Row>
     )
   }
-}
+};
 ```
 
 ## API
-
 ### Row Props
-
 These are the **available** and **reserved** props that can be used on the `Row` component. All other props such as `className` will be automatically be passed down to the generated element.
 
 | Prop | Valid types | Valid values | Default value | Description |
@@ -66,14 +64,13 @@ These are the **available** and **reserved** props that can be used on the `Row`
 | `flexDirection` | string,<br>[object](#responsive-api-using-objects) | `'row'`<br>`'row-reverse'`<br>`'column'`<br>`'column‑reverse'` | `'row'` | This establishes the main-axis<br>thus defining the direction flex items are placed in the flex container. [Read more about flex-direction.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-3) |
 | `flexWrap` | string<br>[object](#responsive-api-using-objects) | `'nowrap'`<br>`'wrap'`<br>`'wrap‑reverse'` | `'nowrap'` | By default<br>flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. [Read more about flex-wrap.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-4) |
 | `justifyContent` | string,<br>[object](#responsive-api-using-objects) | `'flex‑start'`<br>`'flex‑end'`<br>`'center'`<br>`'space‑between'`<br>`'space‑around'` | `'flex‑start'` | This defines the alignment along the main axis. It helps distribute extra free space left over. [Read more about justify-content.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6) |
-| `alignItems` | string,<br>[object](#responsive-api-using-objects) | `'flex‑start'`<br>`'flex‑end'`<br>`'center'`<br>`'baseline'`<br>`'stretch'` | `'flex‑start'` | This defines the default behaviour for how flex items are laid out along the cross axis on the current line. [Read more about align-items.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-7) |
+| `alignItems` | string,<br>[object](#responsive-api-using-objects) | `'flex‑start'`<br>`'flex‑end'`<br>`'center'`<br>`'baseline'`<br>`'stretch'` | `'flex‑start'` | This defines the default behavior for how flex items are laid out along the cross axis on the current line. [Read more about align-items.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-7) |
 | `alignContent` | string,<br>[object](#responsive-api-using-objects) | `'flex‑start'`<br>`'flex‑end'`<br>`'center'`<br>`'space‑between'`<br>`'space-around'`<br>`'stretch'` | `'flex‑start'` | This aligns a flex container's lines within when there is extra space in the cross-axis. [Read more about align-content.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-8) |
 | `elementType` | string,<br>[object](#responsive-api-using-objects) | `'div'`<br>`'span'` | `'div'` | This enables you to change the HTML element type generated. |
 
 Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### Col Props
-
 These are the **available** and **reserved** props that can be used on the `Col` component. All other props such as `className` will be automatically be passed down to the generated element.
 
 | Prop | Valid types | Valid values | Default value | Description |
@@ -93,7 +90,7 @@ Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/c
 ### Responsive API using objects
 Props with a valid type of "object" enable you to set the value corresponding to a breakpoint. Including an object with keys matching that of the breakpoints will set the desired value on that particular breakpoint.
 
-For example, the object for setting a `Row` compoent setting `justifyContent` to "flex-start" on `sm` breakpoint, "center" on `md` breakpoint, and finally "flex-end" on `lg` breakpoint would look like:
+For example, the object for setting a `Row` component setting `justifyContent` to "flex-start" on `sm` breakpoint, "center" on `md` breakpoint, and finally "flex-end" on `lg` breakpoint would look like:
 
 ```js
 {
@@ -107,8 +104,8 @@ For example, the object for setting a `Row` compoent setting `justifyContent` to
 Using this object in the example of the `Row` component:
 
 ```js
-import React from 'react'
-import { Row, Col } from 'react-flexa'
+import React from 'react';
+import { Row, Col } from 'react-flexa';
 
 class Component extends React.Component {
   render() {
