@@ -73,5 +73,23 @@ These are the **available** and **reserved** props that can be used on the `Row`
 Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 
+### Col
+
+These are the **available** and **reserved** props that can be used on the `Col` component. All other props such as `className` will be automatically be passed down to the generated element.
+
+| Prop | Valid types | Valid values | Default value | Description |
+|------|-------------|--------------|---------------|-------------|
+| `xs` | integer | `1`-`12`<br>(based on default columns) | nill | Sets the width of the col based the column configuration (12 by default) for the XS breakpoint and up. |
+| `sm` | integer | `1`-`12`<br>(based on default columns) | nill | Sets the width of the col based the column configuration (12 by default) for the SM breakpoint and up. |
+| `md` | integer | `1`-`12`<br>(based on default columns) | nill | Sets the width of the col based the column configuration (12 by default) for the MD breakpoint and up. |
+| `lg` | integer | `1`-`12`<br>(based on default columns) | nill | Sets the width of the col based the column configuration (12 by default) for the lG breakpoint and up. |
+| `gutter` | integer, string<br>object | '1rem'<br>'12px'<br>`4` | '1rem' | Sets the width of the gutter to be used between columns. For correct positioning you must set the same value (if custom) on the parent Row |
+| `order` | string<br>object | `-1`<br>`0`<br>`1`<br>(etc) | `0` | By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. [Read more about order.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-9) |
+| `alignSelf` | string<br>object | 'auto'<br>'flex‑start'<br>'flex‑end'<br>'center'<br>'baseline'<br>'stretch' | 'auto' | This allows the default alignment (or the one specified by align‑items) to be overridden for individual flex items. [Read more about align-self.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-14) |
+| `elementType` | string<br>object | 'div'<br>'span' | 'div' | This enables you to change the HTML element type generated. |
+
+Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+
 ## License
 [MIT License](.github/LICENSE.md)
