@@ -21,7 +21,7 @@ yarn add react-flexa
 
 ```js
 import React from 'react'
-import { Row, Row } from 'react-flexa'
+import { Row, Col } from 'react-flexa'
 
 class Component extends React.Component {
   render() {
@@ -39,7 +39,7 @@ class Component extends React.Component {
 View [Responsive API using objects](#responsive-api-using-objects) for more information on how to responsivly set flexbox properties based on breakpoint.
 ```js
 import React from 'react'
-import { Row, Row } from 'react-flexa'
+import { Row, Col } from 'react-flexa'
 
 class Component extends React.Component {
   render() {
