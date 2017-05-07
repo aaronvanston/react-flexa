@@ -9,17 +9,13 @@ export const getPropertyValue = (props, breakpoint, property) => {
   const ThemeBreakpoints = themeProvider.theme(props).breakpoints;
 
   if (_.has(props, `${propertySlug}`)) {
-    let fetchedProperty;
-
     if (_.isObject(props[propertySlug])) {
-      fetchedProperty = props[propertySlug][breakpoint];
-    } else if (breakpoint === sortBreakpoints(ThemeBreakpoints)[0]) {
-      fetchedProperty = props[propertySlug];
-    } else {
-      fetchedProperty = null;
+      return props[propertySlug][breakpoint] || null;
+    } 
+    
+    if (breakpoint === sortBreakpoints(ThemeBreakpoints)[0]) {
+      return props[propertySlug] || null;
     }
-
-    return _.isUndefined(fetchedProperty) ? null : fetchedProperty;
   }
 
   return null;
