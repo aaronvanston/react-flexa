@@ -8,3 +8,10 @@ Responsive React Flexbox (CSS Flexible Box Layout Module) grid system based heav
 - Simple API is based off CSS Flexbox API, no need to learn a new syntax.
 - Uses styled-components to customize generated components styles
 - Easily change grid settings based on responsive breakpoints
+
+## Installation
+
+```js
+yarn add react-flexa
+```
+
