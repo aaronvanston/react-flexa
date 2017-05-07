@@ -73,3 +73,5 @@ Available props that can be used on the `Row` component. All other props such as
 Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 
+## License
+[MIT License](.github/LICENSE.md)
