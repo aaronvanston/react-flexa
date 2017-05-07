@@ -11,8 +11,8 @@ export const getPropertyValue = (props, breakpoint, property) => {
   if (_.has(props, `${propertySlug}`)) {
     if (_.isObject(props[propertySlug])) {
       return props[propertySlug][breakpoint] || null;
-    } 
-    
+    }
+
     if (breakpoint === sortBreakpoints(ThemeBreakpoints)[0]) {
       return props[propertySlug] || null;
     }
