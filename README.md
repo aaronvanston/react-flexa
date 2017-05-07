@@ -118,11 +118,70 @@ class Component extends React.Component {
       </Row>
     )
   }
-}
+};
 ```
 
 This will now generate CSS with `min-width` media queries for the responsive values. **Note:** a media query is not set for any value assigned to `xs` due to mobile first min-width media query structure.
 
+## Theming
+### Default Theme
+By default the configuration for react-flex is:
+
+```js
+{
+  columns: 12,
+  gutter: {
+    xs: 1, // rem
+    sm: 1, // rem
+    md: 2, // rem
+    lg: 2, // rem
+  },
+  breakpoints: {
+    xs: 0, // rem
+    sm: 30, // rem
+    md: 48, // rem
+    lg: 60, // rem
+  },
+};
+```
+
+### Custom Theme
+You can customize these values using the `<ThemeProvider />` component from `styled-components` and wrap your `App` with the modified values. **Note**: You **don't need to** include all values in the the new theme if you don't wish to overwrite them.
+
+Its important you use the key of `flexa` when applying the theme (as shown below).
+
+```js
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
+const customTheme = {
+  flexa: {
+    columns: 24,
+    gutter: {
+      xs: 2,
+      sm: 2,
+      md: 4,
+      lg: 4,
+    },
+    breakpoints: {
+      xs: 0,
+      sm: 50,
+      md: 60,
+      lg: 70,
+    },
+  }
+};
+
+class App extends React.Component {
+  render() {
+    return (
+      <ThemeProvider theme={customTheme}>
+        ...
+      </ThemeProvider>
+    )
+  }
+};
+```
 
 ## License
 [MIT License](.github/LICENSE.md)
