@@ -57,7 +57,7 @@ class Component extends React.Component {
 
 ### Row
 
-Available props that can be used on the `Row` component. All other props such as `className` will be automatically be passed down to the generated element.
+These are the available props that can be used on the `Row` component. All other props such as `className` will be automatically be passed down to the generated element.
 
 | Prop | Valid types | Valid values | Default value | Description |
 |------|-------------|--------------|---------------|-------------|
