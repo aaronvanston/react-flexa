@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import { css } from 'styled-components';
 
-import { themeProvider } from '~/theme';
-import { sortBreakpoints } from '~/helpers';
+import { themeProvider } from '../../theme';
+import { sortBreakpoints } from '../../helpers';
 
 export const getPropertyValue = (props, breakpoint, property) => {
   const propertySlug = _.camelCase(property);

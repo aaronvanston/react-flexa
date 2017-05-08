@@ -1,4 +1,4 @@
-import { themeProvider, defaultTheme } from '~/theme';
+import { themeProvider, defaultTheme } from '../theme';
 
 const { theme, breakpoints } = themeProvider;
 
