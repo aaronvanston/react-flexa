@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { FLEXA_THEME } from '~/config';
+import { FLEXA_THEME } from '../config';
 
 import defaultTheme from './defaultTheme';
 

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { css } from 'styled-components';
 
-import { themeProvider } from '~/theme';
+import { themeProvider } from '../../theme';
 
 const { theme } = themeProvider;
 

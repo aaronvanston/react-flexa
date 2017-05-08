@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
-import { themeProvider } from '~/theme';
-import { filterProps, mediaQuery, gutter, CSSProperty } from '~/helpers';
+import { themeProvider } from '../../theme';
+import { filterProps, mediaQuery, gutter, CSSProperty } from '../../helpers';
 
 const Row = styled(props =>
   React.createElement(props.elementType, filterProps(props, Row.PropTypes)),
