@@ -39,6 +39,7 @@
     "jest": "^19.0.2",
     "jsdom": "^9.12.0",
     "jsdom-global": "^2.1.1",
+    "lodash": "^4.17.4",
     "react-addons-test-utils": "^15.4.2"
   },
   "dependencies": {
