@@ -45,8 +45,8 @@ class Component extends React.Component {
   render() {
     return (
       <Row justifyContent={{ sm: "center", lg: "flex-end" }} gutter="16px">
-        <Col xs={3} md={6}>25% width on mobile, 50% width on medium displays and up</Col>
-        <Col xs={3} md={6}>25% width on mobile, 50% width on medium displays and up</Col>
+        <Col xs={3} md={6}>25% width on extra small displays, 50% width on medium displays and up</Col>
+        <Col xs={3} md={6}>25% width on extra small displays, 50% width on medium displays and up</Col>
       </Row>
     )
   }
