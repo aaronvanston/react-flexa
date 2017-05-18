@@ -2,12 +2,14 @@
   "name": "react-flexa",
   "version": "1.0.0",
   "description": "React flexbox grid system using styled components",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "test": "npm run lint && npm run jest",
     "jest": "jest",
-    "jest:watch": "npm run jest -- --watch"
+    "jest:watch": "npm run jest -- --watch",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run lint && npm run jest && npm run compile"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/aaronvanston/react-flexa#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-preset-airbnb": "^2.2.3",
@@ -43,6 +46,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react": "^15.4.2",
     "styled-components": "^1.4.4"
