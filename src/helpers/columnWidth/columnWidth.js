@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import _ from 'lodash';
+import has from 'lodash.has';
 
 import { themeProvider } from '../../theme';
 
@@ -11,7 +11,7 @@ export const percentage = (props, breakpoint) =>
 const columnWidth = (props, breakpoint) => {
   const width = percentage(props, breakpoint);
 
-  return _.has(props, `${breakpoint}`) ? css`
+  return has(props, `${breakpoint}`) ? css`
     flex-basis: ${width}%;
     max-width: ${width}%;
   ` : null;

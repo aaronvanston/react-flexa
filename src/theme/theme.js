@@ -1,11 +1,11 @@
-import _ from 'lodash';
+import has from 'lodash.has';
 
 import { FLEXA_THEME } from '../config';
 
 import defaultTheme from './defaultTheme';
 
 export const theme = (props) => {
-  const customTheme = (_.has(props, 'theme') && _.has(props, `theme[${FLEXA_THEME}]`))
+  const customTheme = (has(props, 'theme') && has(props, `theme[${FLEXA_THEME}]`))
     ? props.theme[FLEXA_THEME]
     : {};
   return ({
