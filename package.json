@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "npm run lint && npm run jest",
+    "test": "yarn run lint && yarn run jest",
     "jest": "jest",
-    "jest:watch": "npm run jest -- --watch",
+    "jest:watch": "yarn run jest -- --watch",
     "compile": "babel -d dist/ src/",
     "prepublish": "yarn run lint && yarn run jest && yarn run compile"
   },
