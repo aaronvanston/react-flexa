@@ -1,13 +1,15 @@
 {
   "name": "react-flexa",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React flexbox grid system using styled components",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "npm run lint && npm run jest",
+    "test": "yarn run lint && yarn run jest",
     "jest": "jest",
-    "jest:watch": "npm run jest -- --watch"
+    "jest:watch": "yarn run jest -- --watch",
+    "compile": "babel -d dist/ src/",
+    "prepublish": "yarn run lint && yarn run jest && yarn run compile"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/aaronvanston/react-flexa#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-preset-airbnb": "^2.2.3",
@@ -39,12 +42,26 @@
     "jest": "^19.0.2",
     "jsdom": "^9.12.0",
     "jsdom-global": "^2.1.1",
-    "react-addons-test-utils": "^15.4.2"
+    "react-addons-test-utils": "^15.4.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.4"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.4"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "react-dom": "^15.4.2",
-    "react": "^15.4.2",
-    "styled-components": "^1.4.4"
+    "lodash.camelcase": "^4.3.0",
+    "lodash.has": "^4.5.2",
+    "lodash.includes": "^4.3.0",
+    "lodash.isnull": "^3.0.0",
+    "lodash.isnumber": "^3.0.3",
+    "lodash.isobject": "^3.0.2",
+    "lodash.isundefined": "^3.0.1",
+    "lodash.map": "^4.6.0",
+    "lodash.omitby": "^4.6.0",
+    "lodash.sortby": "^4.7.0"
   }
 }
