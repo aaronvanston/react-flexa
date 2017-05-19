@@ -1,6 +1,6 @@
 {
   "name": "react-flexa",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React flexbox grid system using styled components",
   "main": "lib/index.js",
   "scripts": {
