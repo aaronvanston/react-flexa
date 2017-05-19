@@ -8,7 +8,7 @@
     "test": "npm run lint && npm run jest",
     "jest": "jest",
     "jest:watch": "npm run jest -- --watch",
-    "compile": "babel -d lib/ src/",
+    "compile": "babel -d dist/ src/",
     "prepublish": "npm run lint && npm run jest && npm run compile"
   },
   "repository": {
