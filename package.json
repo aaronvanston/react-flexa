@@ -44,11 +44,13 @@
     "jsdom-global": "^2.1.1",
     "react-addons-test-utils": "^15.4.2"
   },
-  "dependencies": {
-    "lodash": "^4.17.4",
+  "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react": "^15.4.2",
     "styled-components": "^1.4.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
   }
 }
