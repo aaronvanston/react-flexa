@@ -1,10 +1,11 @@
-import _ from 'lodash';
+import map from 'lodash.map';
+import sortBy from 'lodash.sortby';
 
 const sortBreakpoints = (breakpoints) => {
-  const mappedBreakpoints = _.map(breakpoints, (value, key) => ({ key, value }));
-  const sortedBreakpoints = _.sortBy(mappedBreakpoints, 'value');
+  const mappedBreakpoints = map(breakpoints, (value, key) => ({ key, value }));
+  const sortedBreakpoints = sortBy(mappedBreakpoints, 'value');
 
-  return _.map(sortedBreakpoints, value => (value.key));
+  return map(sortedBreakpoints, value => (value.key));
 };
 
 export default sortBreakpoints;

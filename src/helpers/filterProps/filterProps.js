@@ -1,10 +1,12 @@
-import _ from 'lodash';
+import omitBy from 'lodash.omitby';
+import has from 'lodash.has';
+import includes from 'lodash.includes';
 
 const safeProps = ['children'];
 
 const filterProps = (props, filterOut) =>
-  _.omitBy(props, (value, key) =>
-    _.has(filterOut, `${key}`) && !_.includes(safeProps, key),
+  omitBy(props, (value, key) =>
+    has(filterOut, `${key}`) && !includes(safeProps, key),
   );
 
 export default filterProps;

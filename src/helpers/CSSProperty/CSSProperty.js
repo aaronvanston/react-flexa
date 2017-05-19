@@ -1,15 +1,18 @@
-import _ from 'lodash';
+import has from 'lodash.has';
+import camelCase from 'lodash.camelcase';
+import isObject from 'lodash.isobject';
+import isNull from 'lodash.isnull';
 import { css } from 'styled-components';
 
 import { themeProvider } from '../../theme';
 import { sortBreakpoints } from '../../helpers';
 
 export const getPropertyValue = (props, breakpoint, property) => {
-  const propertySlug = _.camelCase(property);
+  const propertySlug = camelCase(property);
   const ThemeBreakpoints = themeProvider.theme(props).breakpoints;
 
-  if (_.has(props, `${propertySlug}`)) {
-    if (_.isObject(props[propertySlug])) {
+  if (has(props, `${propertySlug}`)) {
+    if (isObject(props[propertySlug])) {
       return props[propertySlug][breakpoint] || null;
     }
 
@@ -25,7 +28,7 @@ export const getPropertyValue = (props, breakpoint, property) => {
 const CSSProperty = (props, breakpoint, property) => {
   const value = getPropertyValue(props, breakpoint, property);
 
-  return _.isNull(value) ? null : css`
+  return isNull(value) ? null : css`
     ${property}: ${value};
   `;
 };
