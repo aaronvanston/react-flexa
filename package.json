@@ -9,7 +9,7 @@
     "jest": "jest",
     "jest:watch": "npm run jest -- --watch",
     "compile": "babel -d dist/ src/",
-    "prepublish": "npm run lint && npm run jest && npm run compile"
+    "prepublish": "yarn run lint && yarn run jest && yarn run compile"
   },
   "repository": {
     "type": "git",
