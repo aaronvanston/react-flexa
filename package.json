@@ -62,6 +62,7 @@
     "lodash.isundefined": "^3.0.1",
     "lodash.map": "^4.6.0",
     "lodash.omitby": "^4.6.0",
-    "lodash.sortby": "^4.7.0"
+    "lodash.sortby": "^4.7.0",
+    "prop-types": "^15.5.10"
   }
 }
