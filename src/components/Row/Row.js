@@ -42,7 +42,7 @@ const justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-betwee
 const alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 const alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch '];
 
-Row.PropTypes = {
+Row.propTypes = {
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,

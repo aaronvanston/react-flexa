@@ -34,7 +34,7 @@ Col.defaultProps = {
 
 const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
-Col.PropTypes = {
+Col.propTypes = {
   xs: PropTypes.number,
   sm: PropTypes.number,
   md: PropTypes.number,
