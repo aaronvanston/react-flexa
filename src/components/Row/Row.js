@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { themeProvider } from '../../theme';
@@ -41,7 +42,7 @@ const justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-betwee
 const alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 const alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch '];
 
-Row.PropTypes = {
+Row.propTypes = {
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
