@@ -1,6 +1,0 @@
-{
-  "testPathIgnorePatterns": [
-     "/dist/",
-     "/node_modules/"
-   ]
-}

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "test": "yarn run lint && yarn run jest",
-    "jest": "jest --config .jestrc",
+    "jest": "jest",
     "jest:watch": "yarn run jest -- --watch",
     "compile": "babel -d dist/ src/",
     "prepublish": "yarn run lint && yarn run jest && yarn run compile",
