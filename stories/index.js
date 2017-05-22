@@ -1,10 +1,11 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@storybook/react';
-import Button from './Button';
-import Welcome from './Welcome';
+import { storiesOf } from '@storybook/react';
+import { Row, Col } from '../src';
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
-
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+storiesOf('react-flexa', module)
+  .add('basic example', () => (
+    <Row justifyContent="center">
+      <Col xs={3}>25% width</Col>
+      <Col xs={3}>25% width</Col>
+    </Row>
+  ));
