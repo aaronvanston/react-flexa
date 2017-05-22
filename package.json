@@ -24,7 +24,7 @@
     "react"
   ],
   "author": "Aaron Vanston",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aaronvanston/react-flexa/issues"
   },
