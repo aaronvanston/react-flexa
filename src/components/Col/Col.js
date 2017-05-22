@@ -83,7 +83,7 @@ Col.propTypes = {
     }),
   ]),
 
-  elementType: 'div',
+  elementType: PropTypes.string,
 
   children: PropTypes.node,
 };
