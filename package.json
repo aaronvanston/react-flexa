@@ -9,7 +9,9 @@
     "jest": "jest",
     "jest:watch": "yarn run jest -- --watch",
     "compile": "babel -d dist/ src/",
-    "prepublish": "yarn run lint && yarn run jest && yarn run compile"
+    "prepublish": "yarn run lint && yarn run jest && yarn run compile",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   },
   "homepage": "https://github.com/aaronvanston/react-flexa#readme",
   "devDependencies": {
+    "@storybook/react": "^3.0.0-alpha.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
@@ -42,8 +45,8 @@
     "jest": "^19.0.2",
     "jsdom": "^9.12.0",
     "jsdom-global": "^2.1.1",
-    "react-addons-test-utils": "^15.4.2",
     "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "styled-components": "^1.4.4"
   },
