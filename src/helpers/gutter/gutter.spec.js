@@ -3,8 +3,8 @@ import { gutterWidth, row, col } from './gutter';
 describe('gutterWidth', () => {
   test('should use default config if no gutter is provided', () => {
     const mockProps = { xs: 1, lg: 4 };
-    expect(gutterWidth(mockProps, 'sm')).toEqual(1);
-    expect(gutterWidth(mockProps, 'lg')).toEqual(2);
+    expect(gutterWidth(mockProps, 'sm')).toEqual(0.5);
+    expect(gutterWidth(mockProps, 'lg')).toEqual(1);
   });
 
   test('should use gutter value in props over config', () => {

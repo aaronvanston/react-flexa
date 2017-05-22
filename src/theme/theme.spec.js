@@ -30,7 +30,7 @@ describe('overriding the default theme', () => {
     const endTheme = {
       breakpoints: { lg: 60, md: 48, sm: 30, xs: 0 },
       columns: 16,
-      gutter: { lg: 2, md: 2, sm: 1, xs: 1 },
+      gutter: { lg: 1, md: 1, sm: 0.5, xs: 0.5 },
     };
 
     expect(theme(customTheme)).toEqual(endTheme);

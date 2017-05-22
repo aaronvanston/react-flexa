@@ -1,10 +1,10 @@
 const defaultTheme = {
   columns: 12,
   gutter: {
-    xs: 1,
-    sm: 1,
-    md: 2,
-    lg: 2,
+    xs: 0.5,
+    sm: 0.5,
+    md: 1,
+    lg: 1,
   },
   breakpoints: {
     xs: 0,
