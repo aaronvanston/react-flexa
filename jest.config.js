@@ -1,6 +1,6 @@
 module.exports = {
   testPathIgnorePatterns: [
-    '/src/',
+    '/dist/',
     '/node_modules/',
   ],
 };
