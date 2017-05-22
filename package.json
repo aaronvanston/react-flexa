@@ -8,8 +8,7 @@
     "test": "yarn run lint && yarn run jest",
     "jest": "jest",
     "jest:watch": "yarn run jest -- --watch",
-    "compile": "babel -d dist/ src/",
-    "prepublish": "yarn run lint && yarn run jest && yarn run compile",
+    "prepublish": "babel -d dist/ src/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
