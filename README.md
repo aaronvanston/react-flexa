@@ -190,5 +190,55 @@ class App extends React.Component {
 };
 ```
 
+## Development
+
+### Requirements
+
+- [nvm](https://github.com/creationix/nvm) or [Node.js](https://nodejs.org/en/) 6 or later
+
+### Setup
+
+1. Install the version of Node specified in `.nvmrc` (optional):
+
+  ```shell
+  $ nvm install && nvm use
+  ```
+
+2. Install [Yarn](https://yarnpkg.com/en/):
+
+  ```shell
+  $ npm i -g yarn
+  ```
+
+3. Install the project's dependencies:
+
+  ```shell
+  $ yarn
+  ```
+
+### Usage
+
+Develop with [Storybook](https://storybooks.js.org/):
+
+```shell
+$ yarn run storybook
+```
+
+Run unit tests with [Jest](https://facebook.github.io/jest/):
+
+```shell
+$ yarn run jest
+
+# Watch for changes
+$ yarn run jest:watch
+```
+
+Lint code with [ESLint](http://eslint.org/):
+
+```shell
+$ yarn run lint
+```
+
 ## License
+
 [MIT License](.github/LICENSE.md)
