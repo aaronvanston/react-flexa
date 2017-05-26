@@ -1,6 +1,6 @@
 {
   "name": "react-flexa",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React flexbox grid system using styled components",
   "main": "dist/index.js",
   "scripts": {
@@ -48,12 +48,12 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.5.4",
     "react-test-renderer": "^15.5.4",
-    "styled-components": "^1.4.4"
+    "styled-components": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "styled-components": "^1.4.4"
+    "styled-components": "^2.0.0"
   },
   "dependencies": {
     "lodash.camelcase": "^4.3.0",
