@@ -28,7 +28,7 @@ const Row = styled(props =>
 Row.defaultProps = {
   display: 'flex',
   flexDirection: 'row',
-  flexWrap: 'nowrap',
+  flexWrap: 'wrap',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
   alignContent: 'flex-start',
