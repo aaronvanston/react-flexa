@@ -4,7 +4,7 @@ import { Row, Col } from '../src';
 import Box from './Box';
 
 export default () => (
-  <Row flexWrap="wrap">
+  <Row>
     <Col xs={12} sm={3} md={2} lg={1}>
       <Box />
     </Col>
