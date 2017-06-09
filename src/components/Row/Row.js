@@ -6,7 +6,7 @@ import { themeProvider } from '../../theme';
 import { filterProps, mediaQuery, gutter, CSSProperty } from '../../helpers';
 
 const Row = styled(props =>
-  React.createElement(props.elementType, filterProps(props, Row.PropTypes)),
+  React.createElement(props.elementType, filterProps(props, Row.propTypes)),
 )`
   // Initial component property
   box-sizing: border-box;
