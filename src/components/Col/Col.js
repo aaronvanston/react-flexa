@@ -6,7 +6,7 @@ import { themeProvider } from '../../theme';
 import { filterProps, mediaQuery, columnWidth, gutter, CSSProperty } from '../../helpers';
 
 const Col = styled(props =>
-  React.createElement(props.elementType, filterProps(props, Col.PropTypes)),
+  React.createElement(props.elementType, filterProps(props, Col.propTypes)),
 )`
   // Initial component properties
   box-sizing: border-box;
