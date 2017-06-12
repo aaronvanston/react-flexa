@@ -1,6 +1,6 @@
 # react-flexa
 
-[![Build Status](https://travis-ci.org/aaronvanston/react-flexa.svg?branch=master)](https://travis-ci.org/aaronvanston/react-flexa) [![npm version](https://badge.fury.io/js/react-flexa.svg)](https://badge.fury.io/js/react-flexa)
+[![Build Status](https://travis-ci.org/aaronvanston/react-flexa.svg?branch=master)](https://travis-ci.org/aaronvanston/react-flexa) [![npm version](https://badge.fury.io/js/react-flexa.svg)](https://badge.fury.io/js/react-flexa) [![codecov](https://codecov.io/gh/aaronvanston/react-flexa/branch/master/graph/badge.svg)](https://codecov.io/gh/aaronvanston/react-flexa)
 
 Responsive React Flexbox (CSS Flexible Box Layout Module) grid system based heavily on the standard CSS API.
 
