@@ -3,4 +3,6 @@ module.exports = {
     '/dist/',
     '/node_modules/',
   ],
+  coverageDirectory: './coverage/',
+  collectCoverage: true,
 };
