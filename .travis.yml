@@ -6,3 +6,6 @@ deploy:
   api_key: $NPM_API_KEY
   on:
     tags: true
+after_success:
+  - yarn global add codecov
+  - codecov
