@@ -5,4 +5,5 @@ module.exports = {
   ],
   coverageDirectory: './coverage/',
   collectCoverage: true,
+  snapshotSerializers: ['enzyme-to-json/serializer'],
 };

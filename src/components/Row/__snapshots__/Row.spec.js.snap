@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`style rendering renders corrects 1`] = `
+<Row
+  alignContent="flex-start"
+  alignItems="flex-start"
+  display="flex"
+  elementType="div"
+  flexDirection="row"
+  flexWrap="wrap"
+  justifyContent="flex-start"
+>
+  <Component
+    alignContent="flex-start"
+    alignItems="flex-start"
+    className="sc-bdVaJa jgdJrf"
+    display="flex"
+    elementType="div"
+    flexDirection="row"
+    flexWrap="wrap"
+    justifyContent="flex-start"
+  >
+    <div
+      className="sc-bdVaJa jgdJrf"
+    />
+  </Component>
+</Row>
+`;

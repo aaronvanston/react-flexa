@@ -1,7 +1,32 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
 import Col from './Col';
+
+describe('style rendering', () => {
+  test('renders corrects', () => {
+    const wrapper = mount(<Col />);
+    expect(wrapper).toMatchStyledComponentsSnapshot();
+  });
+
+  test('generates default css', () => {
+    const tree = renderer.create(<Col />).toJSON();
+    expect(tree).toHaveStyleRule('box-sizing', 'border-box');
+    expect(tree).toHaveStyleRule('display', 'block');
+    expect(tree).toHaveStyleRule('flex', '0 0 auto');
+    expect(tree).toHaveStyleRule('align-self', 'auto');
+    expect(tree).toHaveStyleRule('padding-left', 'calc(0.5rem / 2)');
+    expect(tree).toHaveStyleRule('padding-right', 'calc(0.5rem / 2)');
+  });
+
+  test('generates custom css', () => {
+    const tree = renderer.create(<Col order={2} alignSelf="flex-start" />).toJSON();
+    expect(tree).toHaveStyleRule('order', '2');
+    expect(tree).toHaveStyleRule('align-self', 'flex-start');
+  });
+});
 
 describe('Create element', () => {
   test('Should by default create a div element', () => {

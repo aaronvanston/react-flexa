@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`style rendering renders corrects 1`] = `
+<Col
+  alignSelf="auto"
+  elementType="div"
+  order={0}
+>
+  <Component
+    alignSelf="auto"
+    className="sc-bdVaJa kXNDzH"
+    elementType="div"
+    order={0}
+  >
+    <div
+      className="sc-bdVaJa kXNDzH"
+    />
+  </Component>
+</Col>
+`;
