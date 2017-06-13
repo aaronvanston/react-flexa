@@ -19,6 +19,14 @@ describe('gutterWidth', () => {
     expect(gutterWidth(mockProps, 'lg')).toEqual(9);
   });
 
+  test('should use default breakpoint for if a vlaue is not used within the object', () => {
+    const mockProps = { xs: 1, lg: 4, gutter: { sm: 7, lg: 9 } };
+    expect(gutterWidth(mockProps, 'xs')).toEqual(0.5);
+    expect(gutterWidth(mockProps, 'sm')).toEqual(7);
+    expect(gutterWidth(mockProps, 'md')).toEqual(1);
+    expect(gutterWidth(mockProps, 'lg')).toEqual(9);
+  });
+
   test('should work with strings and numbers', () => {
     const mockProps = { xs: 1, lg: 4, gutter: { sm: '12rem', lg: 42 } };
     expect(gutterWidth(mockProps, 'sm')).toEqual('12rem');
@@ -41,9 +49,16 @@ describe('row', () => {
     expect(rowGutter).toContain('margin-left: calc(-12px / 2);');
   });
 
-  test('should return null if breakpoint does not exist', () => {
+  test('should return theme value if breakpoint does not exist in gutter', () => {
     const mockProps = { xs: 1, gutter: { sm: '12px' } };
-    const rowGutter = row(mockProps, 'lg');
+    const rowGutter = row(mockProps, 'lg').join('');
+    expect(rowGutter).toContain('margin-right: calc(-1rem / 2);');
+    expect(rowGutter).toContain('margin-left: calc(-1rem / 2);');
+  });
+
+  test('should return null if breakpoint does not exist in theme and gutter', () => {
+    const mockProps = { xs: 1, gutter: { sm: '12px' } };
+    const rowGutter = row(mockProps, 'xlg');
     expect(rowGutter).toEqual(null);
   });
 });
@@ -63,9 +78,16 @@ describe('col', () => {
     expect(colGutter).toContain('padding-left: calc(12px / 2);');
   });
 
-  test('should return null if breakpoint does not exist', () => {
+  test('should return null if breakpoint does not exist in gutter', () => {
     const mockProps = { xs: 1, gutter: { sm: '12px' } };
-    const colGutter = col(mockProps, 'lg');
+    const colGutter = col(mockProps, 'lg').join('');
+    expect(colGutter).toContain('padding-right: calc(1rem / 2);');
+    expect(colGutter).toContain('padding-left: calc(1rem / 2);');
+  });
+
+  test('should return null if breakpoint does not exist in theme and gutter', () => {
+    const mockProps = { xs: 1, gutter: { sm: '12px' } };
+    const colGutter = col(mockProps, 'xlg');
     expect(colGutter).toEqual(null);
   });
 });
