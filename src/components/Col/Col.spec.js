@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
@@ -7,7 +7,7 @@ import Col from './Col';
 
 describe('style rendering', () => {
   test('renders corrects', () => {
-    const wrapper = shallow(<Col />);
+    const wrapper = mount(<Col />);
     expect(wrapper).toMatchStyledComponentsSnapshot();
   });
 
