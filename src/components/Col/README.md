@@ -1,6 +1,6 @@
 # Col
 
-A component for creating a column containing other elements. A `<Col/>` must be wrapped in a parent `<Row/>`.
+A component for creating a column containing other elements, within a grid system. A `<Col/>` must be wrapped in a parent `<Row/>`.
 
 ## Properties
 
@@ -9,7 +9,7 @@ View detailed property information in [Col props](https://github.com/aaronvansto
 - `xs`: Sets the width of the col based the column configuration (12 by default) for the XS breakpoint and up.
 - `sm`: Sets the width of the col based the column configuration (12 by default) for the SM breakpoint and up.
 - `md`: Sets the width of the col based the column configuration (12 by default) for the MD breakpoint and up.
-- `lg`: Sets the width of the col based the column configuration (12 by default) for the lG breakpoint and up.
+- `lg`: Sets the width of the col based the column configuration (12 by default) for the LG breakpoint and up.
 - `gutter`: Sets the width of the gutter to be used between columns.
 - `order`: Controls the order in which they appear in the flex container.
 - `alignSelf`: Controls vertical alignment in the flex container.
