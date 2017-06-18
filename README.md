@@ -31,7 +31,7 @@ class Component extends React.Component {
         <Col xs={3}>25% width</Col>
         <Col xs={3}>25% width</Col>
       </Row>
-    )
+    );
   }
 };
 ```
@@ -51,7 +51,7 @@ class Component extends React.Component {
         <Col xs={3} md={6}>25% width on extra small displays, 50% width on medium displays and up</Col>
         <Col xs={3} md={6}>25% width on extra small displays, 50% width on medium displays and up</Col>
       </Row>
-    )
+    );
   }
 };
 ```
@@ -120,7 +120,7 @@ class Component extends React.Component {
       <Row justifyContent={{ xs: "flex-start", md: "center", lg: "flex-end" }}>
         ...
       </Row>
-    )
+    );
   }
 };
 ```
@@ -185,7 +185,7 @@ class App extends React.Component {
       <ThemeProvider theme={customTheme}>
         ...
       </ThemeProvider>
-    )
+    );
   }
 };
 ```
@@ -221,22 +221,22 @@ class App extends React.Component {
 Develop with [Storybook](https://storybooks.js.org/):
 
 ```shell
-$ yarn run storybook
+$ yarn storybook
 ```
 
 Run unit tests with [Jest](https://facebook.github.io/jest/):
 
 ```shell
-$ yarn run jest
+$ yarn jest
 
 # Watch for changes
-$ yarn run jest:watch
+$ yarn jest:watch
 ```
 
 Lint code with [ESLint](http://eslint.org/):
 
 ```shell
-$ yarn run lint
+$ yarn lint
 ```
 
 ## License
