@@ -9,11 +9,11 @@ import { themeProvider } from '../../theme';
 const { theme } = themeProvider;
 
 export const gutterWidth = (props, breakpoint) => {
+  if (has(props, `gutter.${breakpoint}`)) {
+    return props.gutter[breakpoint];
+  }
+  
   if (has(props, 'gutter')) {
-    if (isObject(props.gutter) && has(props, `gutter.${breakpoint}`)) {
-      return props.gutter[breakpoint];
-    }
-    
     return props.gutter;
   }
 
