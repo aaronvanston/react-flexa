@@ -12,13 +12,13 @@ export const gutterWidth = (props, breakpoint) => {
   if (has(props, `gutter.${breakpoint}`)) {
     return props.gutter[breakpoint];
   }
-  
+
   if (has(props, 'gutter')) {
     return props.gutter;
   }
 
-  return isObject(theme(props).gutter) 
-    ? theme(props).gutter[breakpoint] 
+  return isObject(theme(props).gutter)
+    ? theme(props).gutter[breakpoint]
     : theme(props).gutter;
 };
 
