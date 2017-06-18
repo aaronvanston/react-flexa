@@ -32,7 +32,7 @@ Col.defaultProps = {
   elementType: 'div',
 };
 
-const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
+export const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
 Col.propTypes = {
   xs: PropTypes.number,
