@@ -19,7 +19,7 @@ describe('gutterWidth', () => {
     expect(gutterWidth(mockProps, 'lg')).toEqual(9);
   });
 
-  test('should use default breakpoint for if a vlaue is not used within the object', () => {
+  test('should use default breakpoint for if a value is not used within the object', () => {
     const mockProps = { xs: 1, lg: 4, gutter: { sm: 7, lg: 9 } };
     expect(gutterWidth(mockProps, 'xs')).toEqual(0.5);
     expect(gutterWidth(mockProps, 'sm')).toEqual(7);
