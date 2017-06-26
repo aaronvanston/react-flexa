@@ -4,6 +4,8 @@
 
 Responsive React Flexbox (CSS Flexible Box Layout Module) grid system based heavily on the standard CSS API.
 
+## [react-flexa demo](https://aaronvanston.github.io/react-flexa)
+
 ## Features
 
 - Simple API is based off [CSS Flexbox API](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes), no need to learn a new syntax.
