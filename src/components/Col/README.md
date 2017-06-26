@@ -14,6 +14,8 @@ View detailed property information in [Col props](https://github.com/aaronvansto
 - `order`: Controls the order in which they appear in the flex container.
 - `alignSelf`: Controls vertical alignment in the flex container.
 
+Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ## Usage
 
 ### Basic
