@@ -127,6 +127,16 @@ class Component extends React.Component {
 
 This will now generate CSS with `min-width` media queries for the responsive values. **Note:** a media query is not set for any value assigned to `xs` due to mobile first min-width media query structure.
 
+#### Default values when using responsive objects
+
+Props such as `gutter` by will use the default value from the ThemeProvider if not set within the object. For example:
+
+```js
+<Row gutter={{ xs: 1, lg: 2 }}>
+```
+
+Will take the `sm` and `md` gutter values set by default in the ThemeProvider. To remove these simple set them as `0` to these within the responsive object.
+
 ## Theming
 
 ### Default Theme
