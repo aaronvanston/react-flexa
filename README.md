@@ -134,7 +134,7 @@ This will now generate CSS with `min-width` media queries for the responsive val
 Props such as `gutter` by will use the default value from the ThemeProvider if not set within the object. For example:
 
 ```js
-<Row gutter={{ xs: 1, lg: 2 }}>
+<Row gutter={{ xs: 1, lg: 2 }} />
 ```
 
 Will take the `sm` and `md` gutter values set by default in the ThemeProvider. To remove these simple set them as `0` to these within the responsive object.
