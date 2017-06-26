@@ -4,6 +4,8 @@
 
 Responsive React Flexbox (CSS Flexible Box Layout Module) grid system based heavily on the standard CSS API.
 
+## [react-flexa demo](https://aaronvanston.github.io/react-flexa)
+
 ## Features
 
 - Simple API is based off [CSS Flexbox API](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes), no need to learn a new syntax.
@@ -132,7 +134,7 @@ This will now generate CSS with `min-width` media queries for the responsive val
 Props such as `gutter` by will use the default value from the ThemeProvider if not set within the object. For example:
 
 ```js
-<Row gutter={{ xs: 1, lg: 2 }}>
+<Row gutter={{ xs: 1, lg: 2 }} />
 ```
 
 Will take the `sm` and `md` gutter values set by default in the ThemeProvider. To remove these simple set them as `0` to these within the responsive object.
