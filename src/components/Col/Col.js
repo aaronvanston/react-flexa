@@ -13,7 +13,9 @@ const Col = styled(props =>
   flex: 0 0 auto;
   display: block;
 
-  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
+  ${props =>
+    themeProvider.breakpointsKeys(props).map(breakpoint =>
+      mediaQuery(themeProvider.currentBreakpointValue(props, breakpoint), `
     // Generate gutter
     ${gutter.col(props, breakpoint)}
 
@@ -23,7 +25,7 @@ const Col = styled(props =>
     // Responsive Flexbox properties
     ${CSSProperty(props, breakpoint, 'order')}
     ${CSSProperty(props, breakpoint, 'align-self')}
-  `)};
+  `))};
 `;
 
 Col.defaultProps = {
