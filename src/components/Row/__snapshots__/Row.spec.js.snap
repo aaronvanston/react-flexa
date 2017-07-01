@@ -13,7 +13,7 @@ exports[`style rendering renders corrects 1`] = `
   <Component
     alignContent="flex-start"
     alignItems="flex-start"
-    className="sc-bdVaJa jgdJrf"
+    className="sc-bdVaJa jjShM"
     display="flex"
     elementType="div"
     flexDirection="row"
@@ -21,7 +21,7 @@ exports[`style rendering renders corrects 1`] = `
     justifyContent="flex-start"
   >
     <div
-      className="sc-bdVaJa jgdJrf"
+      className="sc-bdVaJa jjShM"
     />
   </Component>
 </Row>
