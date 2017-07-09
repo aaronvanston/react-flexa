@@ -25,4 +25,15 @@ describe('columnWidth', () => {
     const width = columnWidth(mockProps, 'xl');
     expect(width).toEqual(null);
   });
+
+  test('should return "display:none" if breakpoint is explicity set to 0', () => {
+    const width = columnWidth(mockProps, 'md').join('');
+    expect(width).toContain('display:none');
+  });
+
+  test('should return "display:none" if breakpoint is explicity set to "hidden"', () => {
+    const hiddenMockProps = { xs: -1, sm: 2, md: 'hidden', lg: 6 };
+    const width = columnWidth(hiddenMockProps, 'md').join('');
+    expect(width).toContain('display:none');
+  });
 });

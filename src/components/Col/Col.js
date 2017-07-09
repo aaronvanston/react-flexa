@@ -35,10 +35,10 @@ Col.defaultProps = {
 export const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
 Col.propTypes = {
-  xs: PropTypes.number,
-  sm: PropTypes.number,
-  md: PropTypes.number,
-  lg: PropTypes.number,
+  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
+  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
+  md: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
+  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
