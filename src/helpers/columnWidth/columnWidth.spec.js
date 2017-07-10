@@ -1,4 +1,4 @@
-import columnWidth, { percentage } from './columnWidth';
+import columnWidth, { percentage, isHidden } from './columnWidth';
 
 const mockProps = { xs: -1, sm: 2, md: 0, lg: 6 };
 
@@ -11,6 +11,15 @@ describe('percentage', () => {
 
   test('should normalise negative numbers', () => {
     expect(percentage(mockProps, 'xs')).toEqual(8.333333333333332);
+  });
+});
+
+describe('isHidden', () => {
+  test('should return hidden if a given breakpoint is explicitly "0" or "hidden"', () => {
+    expect(isHidden({ xs: 0 }, 'xs')).toEqual(true);
+    expect(isHidden({ xs: 'hidden' }, 'xs')).toEqual(true);
+    expect(isHidden({ xs: undefined }, 'xs')).toEqual(false);
+    expect(isHidden({ xs: 12 }, 'xs')).toEqual(false);
   });
 });
 

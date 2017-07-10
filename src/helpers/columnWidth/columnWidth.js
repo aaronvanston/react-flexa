@@ -9,7 +9,7 @@ export const percentage = (props, breakpoint) =>
   (Math.abs(props[breakpoint]) / theme(props).columns) * 100;
 
 export const isHidden = (props, breakpoint) =>
-  (percentage(props, breakpoint) === 0 || props[breakpoint] === 'hidden');
+  (props[breakpoint] === 0 || props[breakpoint] === 'hidden');
 
 const columnWidth = (props, breakpoint) => {
   if (isHidden(props, breakpoint)) {
