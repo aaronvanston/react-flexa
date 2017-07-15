@@ -8,12 +8,12 @@ exports[`style rendering renders corrects 1`] = `
 >
   <Component
     alignSelf="auto"
-    className="sc-bdVaJa eDhNEW"
+    className="sc-bdVaJa jURNTC"
     elementType="div"
     order={0}
   >
     <div
-      className="sc-bdVaJa eDhNEW"
+      className="sc-bdVaJa jURNTC"
     />
   </Component>
 </Col>
