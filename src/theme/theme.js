@@ -24,4 +24,3 @@ export const theme = (props) => {
 
 export const breakpoints = props => theme(props).breakpoints;
 export const breakpointsKeys = props => Object.keys(theme(props).breakpoints);
-export const currentBreakpointValue = (props, breakpoint) => breakpoints(props)[breakpoint];

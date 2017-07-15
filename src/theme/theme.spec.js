@@ -4,7 +4,6 @@ const {
   theme,
   breakpoints,
   breakpointsKeys,
-  currentBreakpointValue,
 } = themeProvider;
 
 
@@ -102,28 +101,5 @@ describe('breakpointsKeys method', () => {
 
   test('should return default breakpoints if no theme is provided', () => {
     expect(breakpointsKeys()).toEqual(Object.keys(defaultTheme.breakpoints));
-  });
-});
-
-describe('currentBreakpointValue method', () => {
-  const customTheme = {
-    theme: { flexa: { breakpoints: { md: 55, lg: 65, xs: 35, sm: 45 } } },
-  };
-
-  test('should return breakpoint with custom theme', () => {
-    expect(currentBreakpointValue(customTheme, 'sm')).toEqual(45);
-  });
-
-  test('should return custom breakpoint of custom theme with additional breakpoints', () => {
-    const customBreakpoints = {
-      theme: { flexa: { breakpoints: { lg: 65, md: 55, sm: 45, xs: 35, xl: 90, xxl: 120 } } },
-    };
-    expect(currentBreakpointValue(customBreakpoints, 'xl')).toEqual(90);
-  });
-
-  test('should return default breakpoint if no theme is provided', () => {
-    expect(currentBreakpointValue({}, 'sm')).toEqual(30);
-    expect(currentBreakpointValue(undefined, 'sm')).toEqual(30);
-    expect(currentBreakpointValue(null, 'sm')).toEqual(30);
   });
 });
