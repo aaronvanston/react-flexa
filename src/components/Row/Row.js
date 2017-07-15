@@ -11,7 +11,7 @@ const Row = styled(props =>
   // Initial component property
   box-sizing: border-box;
 
-  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
+  ${props => themeProvider.breakpointsKeys(props).map(breakpoint => mediaQuery(props)[breakpoint]`
     // Generate gutter
     ${gutter.row(props, breakpoint)}
 

@@ -13,7 +13,7 @@ const Col = styled(props =>
   flex: 0 0 auto;
   display: block;
 
-  ${props => themeProvider.breakpoints.map(breakpoint => mediaQuery[breakpoint]`
+  ${props => themeProvider.breakpointsKeys(props).map(breakpoint => mediaQuery(props)[breakpoint]`
     // Generate gutter
     ${gutter.col(props, breakpoint)}
 

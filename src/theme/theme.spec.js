@@ -1,11 +1,14 @@
 import { themeProvider, defaultTheme } from '../theme';
 
-const { theme, breakpoints } = themeProvider;
+const {
+  theme,
+  breakpoints,
+  breakpointsKeys,
+} = themeProvider;
 
 
 test('should set the default theme if a custom theme is not provided', () => {
   expect(theme()).toEqual(defaultTheme);
-  expect(breakpoints).toEqual(Object.keys(defaultTheme.breakpoints));
 });
 
 describe('overriding the default theme', () => {
@@ -50,5 +53,53 @@ describe('overriding the default theme', () => {
 
     expect(theme(customTheme)).toEqual(customTheme.theme.flexa);
     expect(theme(customTheme)).not.toEqual(defaultTheme);
+  });
+});
+
+describe('breakpoint method', () => {
+  const customTheme = {
+    theme: { flexa: { breakpoints: { lg: 65, md: 55, sm: 45, xs: 35 } } },
+  };
+
+  test('should return breakpoints of custom theme', () => {
+    expect(breakpoints(customTheme)).toEqual(
+      { lg: 65, md: 55, sm: 45, xs: 35 },
+    );
+  });
+
+  test('should return custom breakpoints of custom theme with additional breakpoints', () => {
+    const customBreakpoints = {
+      theme: { flexa: { breakpoints: { lg: 65, md: 55, sm: 45, xs: 35, xl: 90, xxl: 120 } } },
+    };
+    expect(breakpoints(customBreakpoints)).toEqual(
+      { lg: 65, md: 55, sm: 45, xl: 90, xs: 35, xxl: 120 },
+    );
+  });
+
+  test('should return default breakpoints if no theme is provided', () => {
+    expect(breakpoints()).toEqual(defaultTheme.breakpoints);
+  });
+});
+
+describe('breakpointsKeys method', () => {
+  const customTheme = {
+    theme: { flexa: { breakpoints: { md: 55, lg: 65, xs: 35, sm: 45 } } },
+  };
+
+  test('should return breakpoints keys of custom theme', () => {
+    expect(breakpointsKeys(customTheme)).toEqual(['xs', 'sm', 'md', 'lg']);
+  });
+
+  test('should return custom breakpoints of custom theme with additional breakpoints', () => {
+    const customBreakpoints = {
+      theme: { flexa: { breakpoints: { lg: 65, md: 55, sm: 45, xs: 35, xl: 90, xxl: 120 } } },
+    };
+    expect(breakpointsKeys(customBreakpoints)).toEqual(
+      ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
+    );
+  });
+
+  test('should return default breakpoints if no theme is provided', () => {
+    expect(breakpointsKeys()).toEqual(Object.keys(defaultTheme.breakpoints));
   });
 });
