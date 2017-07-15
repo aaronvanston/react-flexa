@@ -5,7 +5,7 @@ import { themeProvider } from '../../theme';
 const { theme } = themeProvider;
 
 const mediaQuery = props =>
-  (Object.keys(theme(props).breakpoints).reduce((accumulator, value) => {
+  (themeProvider.breakpointsKeys(props).reduce((accumulator, value) => {
     const breakpointSize = theme(props).breakpoints[value];
 
     Object.assign(accumulator, { [value]: (...args) =>
