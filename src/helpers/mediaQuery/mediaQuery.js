@@ -4,18 +4,20 @@ import { themeProvider } from '../../theme';
 
 const { theme } = themeProvider;
 
-const mediaQuery = Object.keys(theme().breakpoints).reduce((accumulator, value) => {
-  const breakpointSize = theme().breakpoints[value];
+const mediaQuery = props =>
+  (Object.keys(theme(props).breakpoints).reduce((accumulator, value) => {
+    const breakpointSize = theme(props).breakpoints[value];
 
-  Object.assign(accumulator, { [value]: (...args) =>
-    (breakpointSize === 0 ? css`${css(...args)}` :
-      css`@media (min-width: ${breakpointSize}rem) {
-        ${css(...args)}
-      }`
-    ),
-  });
+    Object.assign(accumulator, { [value]: (...args) =>
+      (breakpointSize === 0 ? css`${css(...args)}` :
+        css`@media (min-width: ${breakpointSize}rem) {
+          ${css(...args)}
+        }`
+      ),
+    });
 
-  return accumulator;
-}, {});
+    return accumulator;
+  }, {})
+);
 
 export default mediaQuery;
