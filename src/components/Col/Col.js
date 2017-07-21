@@ -11,7 +11,7 @@ const Col = styled(props =>
   // Initial component properties
   box-sizing: border-box;
   flex: 0 0 auto;
-  display: ${props => props.flex ? 'flex' : 'block'};
+  display: ${props => (props.flex ? 'flex' : 'block')};
 
   ${props => themeProvider.breakpointsKeys(props).map(breakpoint => mediaQuery(props)[breakpoint]`
     // Generate gutter
