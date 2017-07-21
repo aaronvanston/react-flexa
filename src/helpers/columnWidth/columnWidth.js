@@ -11,10 +11,19 @@ export const percentage = (props, breakpoint) =>
 export const isHidden = (props, breakpoint) =>
   (props[breakpoint] === 0 || props[breakpoint] === 'hidden');
 
+export const isAutoGrow = (props, breakpoint) =>
+  (props[breakpoint] === 'autoGrow');
+
 const columnWidth = (props, breakpoint) => {
   if (isHidden(props, breakpoint)) {
     return css`
-      display:none;
+      display: none;
+    `;
+  }
+
+  if (props.autoGrow || isAutoGrow(props, breakpoint)) {
+    return css`
+      flex: 1;
     `;
   }
 

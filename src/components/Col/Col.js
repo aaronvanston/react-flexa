@@ -11,7 +11,7 @@ const Col = styled(props =>
   // Initial component properties
   box-sizing: border-box;
   flex: 0 0 auto;
-  display: block;
+  display: ${props => props.flex ? 'flex' : 'block'};
 
   ${props => themeProvider.breakpointsKeys(props).map(breakpoint => mediaQuery(props)[breakpoint]`
     // Generate gutter
@@ -30,6 +30,8 @@ Col.defaultProps = {
   order: 0,
   alignSelf: 'auto',
   elementType: 'div',
+  flex: false,
+  autoGrow: false,
 };
 
 export const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
@@ -82,6 +84,8 @@ Col.propTypes = {
       lg: PropTypes.oneOf(alignSelfOptions),
     }),
   ]),
+
+  autoGrow: PropTypes.bool,
 
   elementType: PropTypes.string,
 
