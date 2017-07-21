@@ -89,6 +89,8 @@ Col.propTypes = {
 
   elementType: PropTypes.string,
 
+  flex: PropTypes.bool,
+
   children: PropTypes.node,
 };
 
