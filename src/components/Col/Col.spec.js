@@ -39,4 +39,9 @@ describe('Create element', () => {
     expect(wrapper.dive().type()).toEqual('span');
     expect(wrapper.dive().type()).not.toEqual('div');
   });
+
+  test('generates custom with custom display css property', () => {
+    const tree = renderer.create(<Col flex />).toJSON();
+    expect(tree).toHaveStyleRule('display', '-webkit-box');
+  });
 });
