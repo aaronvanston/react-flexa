@@ -8,7 +8,8 @@
     "test": "yarn run lint && yarn run jest",
     "jest": "jest",
     "jest:watch": "yarn run jest -- --watch",
-    "prepublish": "babel -d dist/ src/",
+    "build": "babel -d dist/ src/",
+    "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
