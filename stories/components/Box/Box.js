@@ -16,6 +16,10 @@ const Box = styled.div`
     min-height: ${props.height};
   `};
 
+  ${props => props.autoGrow && css`
+    flex: 1;
+  `};
+
   ${props => props.bgColor && css`
     background-color: ${props.bgColor};
   `};
