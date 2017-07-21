@@ -1,4 +1,4 @@
-import columnWidth, { percentage, isHidden } from './columnWidth';
+import columnWidth, { percentage, isHidden, isAutoGrow } from './columnWidth';
 
 const mockProps = { xs: -1, sm: 2, md: 0, lg: 6 };
 
@@ -20,6 +20,15 @@ describe('isHidden', () => {
     expect(isHidden({ xs: 'hidden' }, 'xs')).toEqual(true);
     expect(isHidden({ xs: undefined }, 'xs')).toEqual(false);
     expect(isHidden({ xs: 12 }, 'xs')).toEqual(false);
+  });
+});
+
+describe('isAutoGrow', () => {
+  test('should return flex: 1 if a given property is explicitly "autoGrow" if a given breakpoint is explicitly autoGrow', () => {
+    const autoGrowMockProps = { xs: -1, sm: 2, md: 'autoGrow', lg: 6 };
+    const width = columnWidth(autoGrowMockProps, 'md').join('');
+    expect(isAutoGrow({ xs: 'autoGrow' }, 'xs')).toEqual(true);
+    expect(width).toContain('flex: 1');
   });
 });
 
