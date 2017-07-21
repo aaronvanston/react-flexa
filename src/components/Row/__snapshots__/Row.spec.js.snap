@@ -1,54 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`style rendering renders corrects 1`] = `
-.hXfgcI {
-  box-sizing: border-box;
-  margin-left: calc(-0.5rem / 2);
-  margin-right: calc(-0.5rem / 2);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-}
-
-@media (min-width: 30rem) {
-  .hXfgcI {
-    margin-left: calc(-0.5rem / 2);
-    margin-right: calc(-0.5rem / 2);
-  }
-}
-
-@media (min-width: 48rem) {
-  .hXfgcI {
-    margin-left: calc(-1rem / 2);
-    margin-right: calc(-1rem / 2);
-  }
-}
-
-@media (min-width: 60rem) {
-  .hXfgcI {
-    margin-left: calc(-1rem / 2);
-    margin-right: calc(-1rem / 2);
-  }
-}
-
 <Row
   alignContent="flex-start"
   alignItems="flex-start"
