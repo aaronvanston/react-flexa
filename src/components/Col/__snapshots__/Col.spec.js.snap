@@ -1,15 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`style rendering renders corrects 1`] = `
+.jURNTC {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+  padding-left: calc(0.5rem / 2);
+  padding-right: calc(0.5rem / 2);
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+@media (min-width: 30rem) {
+  .jURNTC {
+    padding-left: calc(0.5rem / 2);
+    padding-right: calc(0.5rem / 2);
+  }
+}
+
+@media (min-width: 48rem) {
+  .jURNTC {
+    padding-left: calc(1rem / 2);
+    padding-right: calc(1rem / 2);
+  }
+}
+
+@media (min-width: 60rem) {
+  .jURNTC {
+    padding-left: calc(1rem / 2);
+    padding-right: calc(1rem / 2);
+  }
+}
+
 <Col
   alignSelf="auto"
+  autoGrow={false}
   elementType="div"
+  flex={false}
   order={0}
 >
   <Component
     alignSelf="auto"
+    autoGrow={false}
     className="sc-bdVaJa jURNTC"
     elementType="div"
+    flex={false}
     order={0}
   >
     <div
