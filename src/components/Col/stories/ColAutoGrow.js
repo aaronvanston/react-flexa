@@ -15,7 +15,7 @@ export default () => (
         <Col>
           <Box>0</Box>
         </Col>
-        <Col autoGrow>
+        <Col xs={'auto'}>
           <Box>auto grow</Box>
         </Col>
         <Col>
@@ -30,7 +30,7 @@ export default () => (
         <Col md={4} lg={2}>
           <Box>responsive</Box>
         </Col>
-        <Col autoGrow>
+        <Col xs={'auto'}>
           <Box>auto grow</Box>
         </Col>
         <Col md={2} lg={4}>
@@ -41,16 +41,16 @@ export default () => (
 
     <Section>
       <Row>
-        <Col md={4} lg={2}>
+        <Col md={2}>
           <Box>responsive</Box>
         </Col>
-        <Col autoGrow>
+        <Col flex={1}>
           <Box>auto grow</Box>
         </Col>
-        <Col autoGrow>
+        <Col xs={'auto'}>
           <Box>auto grow</Box>
         </Col>
-        <Col md={2} lg={4}>
+        <Col md={2}>
           <Box>responsive</Box>
         </Col>
       </Row>
@@ -66,7 +66,7 @@ export default () => (
                 <Col>
                   <Box>0</Box>
                 </Col>
-                <Col autoGrow>
+                <Col flex={1}>
                   <Box>auto grow</Box>
                 </Col>
                 <Col>
@@ -74,7 +74,7 @@ export default () => (
                 </Col>
               </Row>
             </Col>
-            <Col autoGrow flex>
+            <Col display={'flex'} flex={1}>
               <Box autoGrow>vertical autoGrow</Box>
             </Col>
             <Col>
@@ -87,7 +87,7 @@ export default () => (
             <Col>
               <Box>responsive</Box>
             </Col>
-            <Col autoGrow flex>
+            <Col display={'flex'} flex={1}>
               <Box autoGrow>vertical autoGrow</Box>
             </Col>
             <Col>

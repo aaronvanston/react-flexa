@@ -10,12 +10,16 @@ const Col = styled(props =>
 )`
   // Initial component properties
   box-sizing: border-box;
-  flex: 0 0 auto;
-  display: ${props => (props.flex ? 'flex' : 'block')};
 
   ${props => themeProvider.breakpointsKeys(props).map(breakpoint => mediaQuery(props)[breakpoint]`
+    // Generated Display
+    ${CSSProperty(props, breakpoint, 'display')}
+
     // Generate gutter
     ${gutter.col(props, breakpoint)}
+
+    // Generate flex rule before width, this avoid override
+    ${CSSProperty(props, breakpoint, 'flex')}
 
     // Generate column width
     ${columnWidth(props, breakpoint)}
@@ -30,17 +34,17 @@ Col.defaultProps = {
   order: 0,
   alignSelf: 'auto',
   elementType: 'div',
-  flex: false,
-  autoGrow: false,
+  display: 'block',
+  flex: '0 0 auto',
 };
 
 export const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
 Col.propTypes = {
-  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
-  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
-  md: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
-  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden'])]),
+  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden, auto'])]),
+  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden, auto'])]),
+  md: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden, auto'])]),
+  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden, auto'])]),
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
@@ -89,7 +93,12 @@ Col.propTypes = {
 
   elementType: PropTypes.string,
 
-  flex: PropTypes.bool,
+  flex: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
+
+  display: PropTypes.string,
 
   children: PropTypes.node,
 };
