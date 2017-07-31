@@ -1,5 +1,5 @@
-import map from 'lodash.map';
-import sortBy from 'lodash.sortby';
+import map from 'lodash/map';
+import sortBy from 'lodash/sortBy';
 
 const sortBreakpoints = (breakpoints) => {
   const mappedBreakpoints = map(breakpoints, (value, key) => ({ key, value }));

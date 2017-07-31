@@ -1,7 +1,7 @@
-import has from 'lodash.has';
-import isObject from 'lodash.isobject';
-import isNumber from 'lodash.isnumber';
-import isUndefined from 'lodash.isundefined';
+import has from 'lodash/has';
+import isObject from 'lodash/isObject';
+import isNumber from 'lodash/isNumber';
+import isUndefined from 'lodash/isUndefined';
 import { css } from 'styled-components';
 
 import { themeProvider } from '../../theme';

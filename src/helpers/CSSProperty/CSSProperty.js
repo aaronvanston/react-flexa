@@ -1,7 +1,7 @@
-import has from 'lodash.has';
-import camelCase from 'lodash.camelcase';
-import isObject from 'lodash.isobject';
-import isNull from 'lodash.isnull';
+import has from 'lodash/has';
+import camelCase from 'lodash/camelCase';
+import isObject from 'lodash/isObject';
+import isNull from 'lodash/isNull';
 import { css } from 'styled-components';
 
 import { themeProvider } from '../../theme';

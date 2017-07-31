@@ -1,6 +1,6 @@
-import omitBy from 'lodash.omitby';
-import has from 'lodash.has';
-import includes from 'lodash.includes';
+import omitBy from 'lodash/omitBy';
+import has from 'lodash/has';
+import includes from 'lodash/includes';
 
 const safeProps = ['children'];
 

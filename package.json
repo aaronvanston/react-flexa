@@ -64,16 +64,7 @@
     "styled-components": "^2.0.0"
   },
   "dependencies": {
-    "lodash.camelcase": "^4.3.0",
-    "lodash.has": "^4.5.2",
-    "lodash.includes": "^4.3.0",
-    "lodash.isnull": "^3.0.0",
-    "lodash.isnumber": "^3.0.3",
-    "lodash.isobject": "^3.0.2",
-    "lodash.isundefined": "^3.0.1",
-    "lodash.map": "^4.6.0",
-    "lodash.omitby": "^4.6.0",
-    "lodash.sortby": "^4.7.0",
+    "lodash": "^4.17.4",
     "prop-types": "^15.5.10"
   }
 }
