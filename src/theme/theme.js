@@ -1,4 +1,4 @@
-import has from 'lodash.has';
+import has from 'lodash/has';
 
 import { FLEXA_THEME } from '../config';
 

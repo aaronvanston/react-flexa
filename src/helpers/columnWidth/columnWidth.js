@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import has from 'lodash.has';
+import has from 'lodash/has';
 
 import { themeProvider } from '../../theme';
 
