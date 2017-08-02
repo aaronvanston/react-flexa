@@ -42,6 +42,6 @@ describe('Create element', () => {
 
   test('generates custom with custom display css property', () => {
     const tree = renderer.create(<Col display={'flex'} />).toJSON();
-    expect(tree).toHaveStyleRule('display', '-webkit-box');
+    expect(tree).toHaveStyleRule('display', 'flex');
   });
 });
