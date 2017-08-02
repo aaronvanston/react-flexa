@@ -13,6 +13,7 @@ View detailed property information in [Col props](https://github.com/aaronvansto
 - `gutter`: Sets the width of the gutter to be used between columns.
 - `order`: Controls the order in which they appear in the flex container.
 - `alignSelf`: Controls vertical alignment in the flex container.
+- `display`: This defines the display property of the col, inline, block, flex etc.
 
 ## Usage
 
