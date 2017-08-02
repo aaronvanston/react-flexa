@@ -89,8 +89,6 @@ Col.propTypes = {
     }),
   ]),
 
-  autoGrow: PropTypes.bool,
-
   elementType: PropTypes.string,
 
   flex: PropTypes.oneOfType([
