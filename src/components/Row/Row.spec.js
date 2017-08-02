@@ -16,7 +16,7 @@ describe('style rendering', () => {
     expect(tree).toHaveStyleRule('box-sizing', 'border-box');
     expect(tree).toHaveStyleRule('margin-left', 'calc(-0.5rem / 2)');
     expect(tree).toHaveStyleRule('margin-right', 'calc(-0.5rem / 2)');
-    expect(tree).toHaveStyleRule('display', '-webkit-box');
+    expect(tree).toHaveStyleRule('display', 'flex');
     expect(tree).toHaveStyleRule('flex-direction', 'row');
     expect(tree).toHaveStyleRule('flex-wrap', 'wrap');
     expect(tree).toHaveStyleRule('justify-content', 'flex-start');
@@ -35,7 +35,7 @@ describe('style rendering', () => {
         alignContent="stretch"
       />,
       ).toJSON();
-    expect(tree).toHaveStyleRule('display', '-webkit-inline-box');
+    expect(tree).toHaveStyleRule('display', 'inline-flex');
     expect(tree).toHaveStyleRule('flex-direction', 'row-reverse');
     expect(tree).toHaveStyleRule('flex-wrap', 'nowrap');
     expect(tree).toHaveStyleRule('justify-content', 'center');
