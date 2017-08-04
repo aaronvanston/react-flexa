@@ -10,14 +10,14 @@ exports[`style rendering renders corrects 1`] = `
 >
   <Component
     alignSelf="auto"
-    className="sc-bdVaJa ijFKTi"
+    className="sc-bdVaJa hBAqoX"
     display="block"
     elementType="div"
     flex="0 0 auto"
     order={0}
   >
     <div
-      className="sc-bdVaJa ijFKTi"
+      className="sc-bdVaJa hBAqoX"
     />
   </Component>
 </Col>
