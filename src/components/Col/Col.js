@@ -27,7 +27,7 @@ const Col = styled(props =>
     // Responsive Flexbox properties
     ${CSSProperty(props, breakpoint, 'order')}
     ${CSSProperty(props, breakpoint, 'align-self')}
-  `)};
+  `)}
 `;
 
 Col.defaultProps = {

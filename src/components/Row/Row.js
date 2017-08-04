@@ -22,7 +22,7 @@ const Row = styled(props =>
     ${CSSProperty(props, breakpoint, 'justify-content')}
     ${CSSProperty(props, breakpoint, 'align-items')}
     ${CSSProperty(props, breakpoint, 'align-content')}
-  `)};
+  `)}
 `;
 
 Row.defaultProps = {
