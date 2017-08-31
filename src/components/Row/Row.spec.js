@@ -20,8 +20,8 @@ describe('style rendering', () => {
     expect(tree).toHaveStyleRule('flex-direction', 'row');
     expect(tree).toHaveStyleRule('flex-wrap', 'wrap');
     expect(tree).toHaveStyleRule('justify-content', 'flex-start');
-    expect(tree).toHaveStyleRule('align-items', 'flex-start');
-    expect(tree).toHaveStyleRule('align-content', 'flex-start');
+    expect(tree).toHaveStyleRule('align-items', 'stretch');
+    expect(tree).toHaveStyleRule('align-content', 'stretch');
   });
 
   test('generates custom css', () => {
