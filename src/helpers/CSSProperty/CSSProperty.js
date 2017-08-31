@@ -18,7 +18,7 @@ export const getPropertyValue = (props, breakpoint, property) => {
         return value.toString();
       }
 
-      return props[propertySlug][breakpoint] || null;
+      return value || null;
     }
 
     if (breakpoint === sortBreakpoints(ThemeBreakpoints)[0]) {

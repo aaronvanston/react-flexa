@@ -36,6 +36,11 @@ describe('getPropertyValue', () => {
     const mockProps = { order: { sm: 0 } };
     expect(getPropertyValue(mockProps, 'sm', 'order')).toEqual('0');
   });
+
+  test('should not generate value when it is null (falsy)', () => {
+    const mockProps = { order: { sm: false } };
+    expect(getPropertyValue(mockProps, 'sm', 'order')).toEqual(null);
+  });
 });
 
 describe('CSSProperty', () => {
