@@ -8,7 +8,7 @@ import Row from './Row';
 describe('style rendering', () => {
   test('renders corrects', () => {
     const wrapper = mount(<Row />);
-    expect(wrapper).toMatchStyledComponentsSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   test('generates default css', () => {

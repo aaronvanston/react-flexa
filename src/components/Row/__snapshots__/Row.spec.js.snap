@@ -1,6 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`style rendering renders corrects 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin-left: calc(-0.5rem / 2);
+  margin-right: calc(-0.5rem / 2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+@media (min-width: 30rem) {
+  .c0 {
+    margin-left: calc(-0.5rem / 2);
+    margin-right: calc(-0.5rem / 2);
+  }
+}
+
+@media (min-width: 48rem) {
+  .c0 {
+    margin-left: calc(-1rem / 2);
+    margin-right: calc(-1rem / 2);
+  }
+}
+
+@media (min-width: 60rem) {
+  .c0 {
+    margin-left: calc(-1rem / 2);
+    margin-right: calc(-1rem / 2);
+  }
+}
+
 <Row
   alignContent="stretch"
   alignItems="stretch"
@@ -13,7 +60,7 @@ exports[`style rendering renders corrects 1`] = `
   <Component
     alignContent="stretch"
     alignItems="stretch"
-    className="sc-bdVaJa btobKP"
+    className="c0"
     display="flex"
     elementType="div"
     flexDirection="row"
@@ -21,7 +68,7 @@ exports[`style rendering renders corrects 1`] = `
     justifyContent="flex-start"
   >
     <div
-      className="sc-bdVaJa btobKP"
+      className="c0"
     />
   </Component>
 </Row>
