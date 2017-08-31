@@ -1,4 +1,4 @@
-import columnWidth, { percentage, isHidden, isAuto } from './columnWidth';
+import columnWidth, { percentage, isHidden, isAuto, display } from './columnWidth';
 
 const mockProps = { xs: -1, sm: 2, md: 0, lg: 6 };
 
@@ -29,6 +29,28 @@ describe('isAuto', () => {
     const width = columnWidth(autoGrowMockProps, 'md').join('');
     expect(isAuto({ xs: 'auto' }, 'xs')).toEqual(true);
     expect(width).toContain('flex: 1');
+  });
+});
+
+describe('display', () => {
+  test('should return block if no display is set', () => {
+    const value = display(mockProps, 'lg').join('');
+    expect(value).toContain('display: block');
+  });
+
+  test('should return display prop if set as string', () => {
+    const value = display({ sm: 1, display: 'flex' }, 'sm').join('');
+    expect(value).toContain('display: flex');
+  });
+
+  test('should return null prop if display is set to current breakpoint', () => {
+    const value = display({ sm: 1, display: { sm: 'flex' } }, 'sm');
+    expect(value).toEqual(null);
+  });
+
+  test('should return display prop if display does not have matching breakpoint', () => {
+    const value = display({ sm: 1, display: { md: 'flex' } }, 'sm').join('');
+    expect(value).toContain('display: block');
   });
 });
 
