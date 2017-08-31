@@ -8,7 +8,7 @@ import Col from './Col';
 describe('style rendering', () => {
   test('renders corrects', () => {
     const wrapper = mount(<Col />);
-    expect(wrapper).toMatchStyledComponentsSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   test('generates default css', () => {
