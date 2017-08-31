@@ -2,8 +2,8 @@
 
 exports[`style rendering renders corrects 1`] = `
 <Row
-  alignContent="flex-start"
-  alignItems="flex-start"
+  alignContent="stretch"
+  alignItems="stretch"
   display="flex"
   elementType="div"
   flexDirection="row"
@@ -11,9 +11,9 @@ exports[`style rendering renders corrects 1`] = `
   justifyContent="flex-start"
 >
   <Component
-    alignContent="flex-start"
-    alignItems="flex-start"
-    className="sc-bdVaJa clTyma"
+    alignContent="stretch"
+    alignItems="stretch"
+    className="sc-bdVaJa btobKP"
     display="flex"
     elementType="div"
     flexDirection="row"
@@ -21,7 +21,7 @@ exports[`style rendering renders corrects 1`] = `
     justifyContent="flex-start"
   >
     <div
-      className="sc-bdVaJa clTyma"
+      className="sc-bdVaJa btobKP"
     />
   </Component>
 </Row>
