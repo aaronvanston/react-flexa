@@ -55,3 +55,49 @@ exports[`style rendering renders corrects 1`] = `
   </Component>
 </Col>
 `;
+
+exports[`style rendering should render display to flex 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: calc(0.5rem / 2);
+  padding-right: calc(0.5rem / 2);
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: 16.666666666666664%;
+  -ms-flex-basis: 16.666666666666664%;
+  flex-basis: 16.666666666666664%;
+  max-width: 16.666666666666664%;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+@media (min-width: 30rem) {
+  .c0 {
+    padding-left: calc(0.5rem / 2);
+    padding-right: calc(0.5rem / 2);
+  }
+}
+
+@media (min-width: 48rem) {
+  .c0 {
+    padding-left: calc(1rem / 2);
+    padding-right: calc(1rem / 2);
+  }
+}
+
+@media (min-width: 60rem) {
+  .c0 {
+    padding-left: calc(1rem / 2);
+    padding-right: calc(1rem / 2);
+  }
+}
+
+<div
+  className="c0"
+/>
+`;

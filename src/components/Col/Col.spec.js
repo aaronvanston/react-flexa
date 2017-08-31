@@ -26,6 +26,12 @@ describe('style rendering', () => {
     expect(tree).toHaveStyleRule('order', '2');
     expect(tree).toHaveStyleRule('align-self', 'flex-start');
   });
+
+  test('should render display to flex', () => {
+    const tree = renderer.create(<Col xs={2} display="flex" />).toJSON();
+    expect(tree).toMatchSnapshot();
+    expect(tree).toHaveStyleRule('display', 'flex');
+  });
 });
 
 describe('Create element', () => {
