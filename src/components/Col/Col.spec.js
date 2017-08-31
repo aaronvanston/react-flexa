@@ -26,6 +26,22 @@ describe('style rendering', () => {
     expect(tree).toHaveStyleRule('order', '2');
     expect(tree).toHaveStyleRule('align-self', 'flex-start');
   });
+
+  test('should render display to flex', () => {
+    const tree = renderer.create(<Col xs={2} display="flex" />).toJSON();
+    expect(tree).toMatchSnapshot();
+    expect(tree).toHaveStyleRule('display', 'flex');
+  });
+
+  test('should render propper display none on xs and flex on sm', () => {
+    const tree = renderer.create(<Col xs="hidden" sm={1} display="flex" />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('should render propper display none on xs, block on sm and flex on md', () => {
+    const tree = renderer.create(<Col xs="hidden" sm={1} display={{ md: 'flex' }} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 describe('Create element', () => {

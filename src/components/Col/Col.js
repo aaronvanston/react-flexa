@@ -38,6 +38,7 @@ Col.defaultProps = {
   flex: '0 0 auto',
 };
 
+const displayOptions = ['flex', 'inline-flex', 'block', 'none', 'inline-block'];
 export const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
 Col.propTypes = {
@@ -96,7 +97,15 @@ Col.propTypes = {
     PropTypes.string,
   ]),
 
-  display: PropTypes.string,
+  display: PropTypes.oneOfType([
+    PropTypes.oneOf(displayOptions),
+    PropTypes.shape({
+      xs: PropTypes.oneOf(displayOptions),
+      sm: PropTypes.oneOf(displayOptions),
+      md: PropTypes.oneOf(displayOptions),
+      lg: PropTypes.oneOf(displayOptions),
+    }),
+  ]),
 
   children: PropTypes.node,
 };
