@@ -13,7 +13,12 @@ export const getPropertyValue = (props, breakpoint, property) => {
 
   if (has(props, `${propertySlug}`)) {
     if (isObject(props[propertySlug])) {
-      return props[propertySlug][breakpoint] || null;
+      const value = props[propertySlug][breakpoint];
+      if (value === 0) {
+        return value.toString();
+      }
+
+      return value || null;
     }
 
     if (breakpoint === sortBreakpoints(ThemeBreakpoints)[0]) {
@@ -27,7 +32,6 @@ export const getPropertyValue = (props, breakpoint, property) => {
 
 const CSSProperty = (props, breakpoint, property) => {
   const value = getPropertyValue(props, breakpoint, property);
-
   return isNull(value) ? null : css`
     ${property}: ${value};
   `;
