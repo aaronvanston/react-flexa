@@ -43,15 +43,26 @@ const alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stre
 const alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
 
 Row.propTypes = {
-
   gutter: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
     PropTypes.shape({
-      xs: PropTypes.number,
-      sm: PropTypes.number,
-      md: PropTypes.number,
-      lg: PropTypes.number,
+      xs: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
+      sm: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
+      md: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
+      lg: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ]),
     }),
   ]),
 
