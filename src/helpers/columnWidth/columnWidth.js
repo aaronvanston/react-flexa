@@ -32,7 +32,7 @@ const columnWidth = (props, breakpoint) => {
   return has(props, `${breakpoint}`) ? css`
     flex-basis: ${width}%;
     max-width: ${width}%;
-    display: block;
+    ${!props.display && css`display: block`}
   ` : null;
 };
 export default columnWidth;
