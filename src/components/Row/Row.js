@@ -30,8 +30,8 @@ Row.defaultProps = {
   flexDirection: 'row',
   flexWrap: 'wrap',
   justifyContent: 'flex-start',
-  alignItems: 'flex-start',
-  alignContent: 'flex-start',
+  alignItems: 'stretch',
+  alignContent: 'stretch',
   elementType: 'div',
 };
 
