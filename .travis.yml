@@ -1,5 +1,6 @@
 language: node_js
 cache: yarn
+dist: precise
 deploy:
   provider: npm
   email: $NPM_EMAIL
