@@ -12,6 +12,12 @@ const defaultTheme = {
     md: 48,
     lg: 60,
   },
+  col: {
+    xs: undefined,
+    sm: undefined,
+    md: undefined,
+    lg: undefined,
+  },
 };
 
 export default defaultTheme;

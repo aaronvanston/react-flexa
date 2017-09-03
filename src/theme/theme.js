@@ -19,6 +19,10 @@ export const theme = (props) => {
       ...defaultTheme.breakpoints,
       ...customTheme.breakpoints,
     },
+    col: {
+      ...defaultTheme.col,
+      ...customTheme.col,
+    },
   });
 };
 
