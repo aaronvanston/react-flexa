@@ -1,12 +1,32 @@
 import columnWidth, { percentage, isHidden, isAuto, display } from './columnWidth';
 
 const mockProps = { xs: -1, sm: 2, md: 0, lg: 6 };
+const mockTheme = customTheme => ({
+  flexa: { ...customTheme },
+});
 
 describe('percentage', () => {
   test('should generate a percentage based on collumn size', () => {
     expect(percentage(mockProps, 'lg')).toEqual(50);
     expect(percentage(mockProps, 'md')).toEqual(0);
     expect(percentage(mockProps, 'sm')).toEqual(16.666666666666664);
+  });
+
+  test('should generate a percentage based on "col" theme value if set and col breakpoint does not exist', () => {
+    const breakpoints = { sm: 2, md: 0, lg: 6 };
+    const props = {
+      ...breakpoints,
+      theme: mockTheme({ col: { xs: 12 } }),
+    };
+    expect(percentage(props, 'xs')).toEqual(100);
+  });
+
+  test('should generate a percentage based on breakpoint value even if theme "col" value is set', () => {
+    const props = {
+      ...mockProps,
+      theme: mockTheme({ col: { md: 12 } }),
+    };
+    expect(percentage(props, 'md')).toEqual(0);
   });
 
   test('should normalise negative numbers', () => {
@@ -64,6 +84,16 @@ describe('columnWidth', () => {
   test('should return nothing if breakpoint does not exist', () => {
     const width = columnWidth(mockProps, 'xl');
     expect(width).toEqual(null);
+  });
+
+  test('should generate width if "col" value is set in theme', () => {
+    const props = {
+      ...mockProps,
+      theme: mockTheme({ col: { xl: 12 } }),
+    };
+    const width = columnWidth(props, 'xl').join('');
+    expect(width).toContain('flex-basis: 100%;');
+    expect(width).toContain('max-width: 100%;');
   });
 
   test('should not return display:block', () => {
