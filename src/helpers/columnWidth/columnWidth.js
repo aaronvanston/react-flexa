@@ -41,12 +41,15 @@ const columnWidth = (props, breakpoint) => {
     `;
   }
 
-  const width = percentage(props, breakpoint);
+  if (!has(props, `${breakpoint}`) && isUndefined(theme(props).col[breakpoint])) {
+    return null;
+  }
 
-  return has(props, `${breakpoint}`) || !isUndefined(theme(props).col[breakpoint]) ? css`
+  const width = percentage(props, breakpoint);
+  return css`
     flex-basis: ${width}%;
     max-width: ${width}%;
     ${display(props, breakpoint)}
-  ` : null;
+  `;
 };
 export default columnWidth;
