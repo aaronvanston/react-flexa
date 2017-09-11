@@ -7,12 +7,8 @@ import { Box } from '../../../../stories/components';
 import { Row, Col } from '../../';
 import { alignSelfOptions } from '../Col';
 
-const rowDocStyles = {
-  height: '100vh',
-};
-
 export default () => (
-  <Row style={rowDocStyles}>
+  <Row>
     <Col xs={12} sm={4} md={6} lg={3}>
       <Box>col</Box>
     </Col>
