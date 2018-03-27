@@ -60,9 +60,9 @@
     "styled-components": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "styled-components": "^2.0.0"
+    "react": "^15.5.4 || ^16.2.0",
+    "react-dom": "^15.5.4 || ^16.2.0",
+    "styled-components": "^2.0.0 || ^3.2.3"
   },
   "dependencies": {
     "lodash": "^4.17.4",
