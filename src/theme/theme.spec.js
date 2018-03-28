@@ -34,6 +34,7 @@ describe('overriding the default theme', () => {
       breakpoints: { lg: 60, md: 48, sm: 30, xs: 0 },
       columns: 16,
       gutter: { lg: 1, md: 1, sm: 0.5, xs: 0.5 },
+      col: { lg: undefined, md: undefined, sm: undefined, xs: undefined },
     };
 
     expect(theme(customTheme)).toEqual(endTheme);
@@ -47,6 +48,7 @@ describe('overriding the default theme', () => {
           breakpoints: { lg: 65, md: 55, sm: 45, xs: 35 },
           columns: 10,
           gutter: { lg: 4, md: 3, sm: 2, xs: 1 },
+          col: { lg: undefined, md: undefined, sm: undefined, xs: 12 },
         },
       },
     };
