@@ -36,16 +36,18 @@ Col.defaultProps = {
   elementType: 'div',
   display: 'block',
   flex: '0 0 auto',
+  sibling: '',
 };
 
 const displayOptions = ['flex', 'inline-flex', 'block', 'none', 'inline-block'];
 export const alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
 
 Col.propTypes = {
-  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden', 'auto'])]),
-  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden', 'auto'])]),
-  md: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden', 'auto'])]),
-  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['hidden', 'auto'])]),
+  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
+  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
+  md: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
+  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
+  sibling: PropTypes.string,
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,
