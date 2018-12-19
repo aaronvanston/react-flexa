@@ -88,4 +88,16 @@ describe('columnWidth', () => {
     const width = columnWidth(hiddenMockProps, 'md').join('');
     expect(width).toContain('display: none');
   });
+
+  test('should return a fixed column', () => {
+    const hiddenMockProps = { xs: 12, sm: 5, md: 6, lg: '390px', sibling: '' };
+    const width = columnWidth(hiddenMockProps, 'lg').join('');
+    expect(width).toContain('max-width: 390px;');
+  });
+
+  test('should return a fixed column with sibling responsive', () => {
+    const hiddenMockProps = { xs: 12, sm: 5, md: 6, lg: '100%', sibling: '390px' };
+    const width = columnWidth(hiddenMockProps, 'lg').join('');
+    expect(width).toContain('calc(100% - 390px);');
+  });
 });
