@@ -36,7 +36,6 @@ Col.defaultProps = {
   elementType: 'div',
   display: 'block',
   flex: '0 0 auto',
-  sibling: '',
 };
 
 const displayOptions = ['flex', 'inline-flex', 'block', 'none', 'inline-block'];
@@ -47,7 +46,6 @@ Col.propTypes = {
   sm: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
   md: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
   lg: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.oneOf(['hidden', 'auto'])]),
-  sibling: PropTypes.string,
 
   gutter: PropTypes.oneOfType([
     PropTypes.number,

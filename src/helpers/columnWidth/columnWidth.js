@@ -46,15 +46,7 @@ const columnWidth = (props, breakpoint) => {
     `;
   }
 
-  if (has(props, `${breakpoint}`) && typeof props[breakpoint] === 'string' && props.sibling.length) {
-    return css`
-      width: calc(${props[breakpoint]} - ${props.sibling});
-      max-width: calc(${props[breakpoint]} - ${props.sibling});
-      flex-basis: initial;
-    `;
-  }
-
-  if (has(props, `${breakpoint}`) && typeof props[breakpoint] === 'string' && !props.sibling.length) {
+  if (has(props, `${breakpoint}`) && typeof props[breakpoint] === 'string') {
     return css`
       width: ${props[breakpoint]};
       max-width: ${props[breakpoint]};

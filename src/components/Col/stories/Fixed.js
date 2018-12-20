@@ -12,7 +12,7 @@ export default () => (
           <Box>col 1</Box>
         </Col>
 
-        <Col xs={12} sm={6} md={6} lg="80%" sibling="390px">
+        <Col xs={12} sm={6} md={6} lg="calc(80% - 390px)">
           <Box bgColor="#9c27b0">col 2</Box>
         </Col>
 
@@ -29,7 +29,7 @@ export default () => (
           <Box>col 1</Box>
         </Col>
 
-        <Col xs={12} sm={6} md={6} lg="80%" sibling="390px">
+        <Col xs={12} sm={6} md={6} lg="calc(80% - 390px)">
           <Box bgColor="#9c27b0">col 2</Box>
         </Col>
 
@@ -46,7 +46,7 @@ export default () => (
           <Box>col 1</Box>
         </Col>
 
-        <Col xs={12} sm={6} md={6} lg="80%" sibling="390px" order={1}>
+        <Col xs={12} sm={6} md={6} lg="calc(80% - 390px)" order={1}>
           <Box bgColor="#9c27b0">col 2</Box>
         </Col>
 
@@ -67,8 +67,7 @@ export default () => (
           xs={12}
           sm={6}
           md={6}
-          lg="80%"
-          sibling="390px"
+          lg="calc(80% - 390px)"
           alignSelf={{ xs: 'flex-end', md: 'center', lg: 'flex-start' }}
         >
           <Box bgColor="#9c27b0">col 2</Box>

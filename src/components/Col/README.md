@@ -55,7 +55,7 @@ import { Row, Col } from 'react-flexa';
 export default () => (
   <Row>
     <Col xs={12} sm={6} md={6} lg="390px"></Col>
-    <Col xs={12} sm={6} md={6} lg="100%" sibling="390px"></Col>
+    <Col xs={12} sm={6} md={6} lg="calc(100% - 390px)"></Col>
   </Row>
 );
 ```
@@ -67,7 +67,7 @@ import { Row, Col } from 'react-flexa';
 export default () => (
   <Row>
     <Col xs={12} sm={6} md={6} lg="390px"></Col>
-    <Col xs={12} sm={6} md={6} lg="80%" sibling="390px"></Col>
+    <Col xs={12} sm={6} md={6} lg="calc(80% - 390px)"></Col>
     <Col xs={12} sm={6} md={6} lg="20%"></Col>
   </Row>
 );

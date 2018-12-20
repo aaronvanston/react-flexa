@@ -40,7 +40,6 @@ exports[`style rendering renders corrects 1`] = `
   elementType="div"
   flex="0 0 auto"
   order={0}
-  sibling=""
 >
   <Component
     alignSelf="auto"
@@ -49,7 +48,6 @@ exports[`style rendering renders corrects 1`] = `
     elementType="div"
     flex="0 0 auto"
     order={0}
-    sibling=""
   >
     <div
       className="c0"
