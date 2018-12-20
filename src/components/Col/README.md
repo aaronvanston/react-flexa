@@ -6,11 +6,18 @@ A component for creating a column containing other elements, within a grid syste
 
 View detailed property information in [Col props](https://github.com/aaronvanston/react-flexa#col-props) within the react-flexa readme.
 
-- `xs`: Sets the width of the col based the column configuration (12 by default) for the XS breakpoint and up, or pass a width like string to fixed have a fixed colum.
-- `sm`: Sets the width of the col based the column configuration (12 by default) for the SM breakpoint and up, or pass a width like string to fixed have a fixed colum.
-- `md`: Sets the width of the col based the column configuration (12 by default) for the MD breakpoint and up, or pass a width like string to fixed have a fixed colum.
-- `lg`: Sets the width of the col based the column configuration (12 by default) for the LG breakpoint and up, or pass a width like string to fixed have a fixed colum.
-- `sibling`: Sets the width base on sibling size, to make a calc.
+- `xs`:
+  - **Number:** Sets the width of the col based the column configuration (12 by default) for the XS breakpoint and up.
+  - **String:** Set a width like string `xs="390px"` to fixed have a fixed colum, or create a calc `xs="calc(100% - 390px)"` base on sibling to have a responsive column.
+- `sm`:
+  - **Number:** Sets the width of the col based the column configuration (12 by default) for the SM breakpoint and up.
+  - **String:** Set a width like string `sm="390px"` to fixed have a fixed colum, or create a calc `sm="calc(100% - 390px)"` base on sibling to have a responsive column.
+- `md`:
+  - **Number:** Sets the width of the col based the column configuration (12 by default) for the MD breakpoint and up.
+  - **String:** Set a width like string `md="390px"` to fixed have a fixed colum, or create a calc `md="calc(100% - 390px)"` base on sibling to have a responsive column.
+- `lg`:
+  - **Number:** Sets the width of the col based the column configuration (12 by default) for the LG breakpoint and up.
+  - **String:** Set a width like string `lg="390px"` to fixed have a fixed colum, or create a calc `lg="calc(100% - 390px)"` base on sibling to have a responsive column.
 - `gutter`: Sets the width of the gutter to be used between columns.
 - `order`: Controls the order in which they appear in the flex container.
 - `alignSelf`: Controls vertical alignment in the flex container.
