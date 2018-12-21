@@ -38,10 +38,22 @@ const columnWidth = (props, breakpoint) => {
 
   const width = percentage(props, breakpoint);
 
-  return has(props, `${breakpoint}`) ? css`
-    flex-basis: ${width}%;
-    max-width: ${width}%;
-    ${display(props, breakpoint)}
-  ` : null;
+  if (has(props, `${breakpoint}`) && typeof props[breakpoint] !== 'string') {
+    return css`
+      flex-basis: ${width}%;
+      max-width: ${width}%;
+      ${display(props, breakpoint)}
+    `;
+  }
+
+  if (has(props, `${breakpoint}`) && typeof props[breakpoint] === 'string') {
+    return css`
+      width: ${props[breakpoint]};
+      max-width: ${props[breakpoint]};
+      flex-basis: initial;
+    `;
+  }
+
+  return null;
 };
 export default columnWidth;

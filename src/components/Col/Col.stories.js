@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import withReadme from 'storybook-readme/with-readme';
 
-import { Col, Fluid, Responsive, AutoGrow } from './stories';
+import { Col, Fluid, Responsive, AutoGrow, Fixed } from './stories';
 import README from './README.md';
 
 storiesOf('Col', module)
@@ -14,4 +14,5 @@ storiesOf('Col', module)
   .add('Default', () => <Col />)
   .add('Fluid example', () => <Fluid />)
   .add('Responsive example', () => <Responsive />)
-  .add('Auto grow example', () => <AutoGrow />);
+  .add('Auto grow example', () => <AutoGrow />)
+  .add('One fixed col', () => <Fixed />);
