@@ -11,10 +11,10 @@ export const percentage = (props, breakpoint) =>
 
 export const display = (props, breakpoint) => {
   if ((props.display && isString(props.display))) {
-    return css`display: ${props.display}`;
+    return css`display: ${props.display};`;
   }
 
-  return !has(props.display, `${breakpoint}`) ? css`display: block` : null;
+  return !has(props.display, `${breakpoint}`) ? css`display: block;` : null;
 };
 
 export const isHidden = (props, breakpoint) =>
