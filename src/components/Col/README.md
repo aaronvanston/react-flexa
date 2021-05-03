@@ -23,6 +23,8 @@ View detailed property information in [Col props](https://github.com/aaronvansto
 - `alignSelf`: Controls vertical alignment in the flex container.
 - `display`: This defines the display property of the col, inline, block, flex etc.
 
+Flexbox descriptions sourced from [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ## Usage
 
 ### Basic

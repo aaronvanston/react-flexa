@@ -35,12 +35,12 @@ Row.defaultProps = {
   elementType: 'div',
 };
 
-const displayOptions = ['flex', 'inline-flex'];
-const flexDirectionOptions = ['row', 'row-reverse', 'column', 'column-reverse'];
-const flexWrapOptions = ['nowrap', 'wrap', 'wrap-reverse'];
-const justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
-const alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
-const alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
+export const displayOptions = ['flex', 'inline-flex'];
+export const flexDirectionOptions = ['row', 'row-reverse', 'column', 'column-reverse'];
+export const flexWrapOptions = ['nowrap', 'wrap', 'wrap-reverse'];
+export const justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
+export const alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
+export const alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
 
 Row.propTypes = {
   gutter: PropTypes.oneOfType([
