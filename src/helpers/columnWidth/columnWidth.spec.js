@@ -69,13 +69,13 @@ describe('columnWidth', () => {
   test('should not return display:block', () => {
     const displayProps = { xs: 1, display: 'flex' };
     const width = columnWidth(displayProps, 'xs');
-    expect(width).not.toContain('display: block');
+    expect(width).not.toContain('display: block;');
   });
 
-  test('should only return display:block if display has not alreayd been set', () => {
+  test('should only return display:block if display has not already been set', () => {
     const displayProps = { xs: 1 };
     const width = columnWidth(displayProps, 'xs');
-    expect(width).toContain('display: block');
+    expect(width).toContain('display: block;');
   });
 
   test('should return "display:none" if breakpoint is explicity set to 0', () => {

@@ -76,6 +76,8 @@ exports[`style rendering should render display to flex 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 @media (min-width: 30rem) {
